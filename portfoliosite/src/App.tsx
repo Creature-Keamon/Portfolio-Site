@@ -11,21 +11,21 @@ function App() {
           <ContentItem
             Right={false}
             Name="Linus Sex Tips"
-            Year={2069}
+            Content={2069}
             ImgName="Linus.jpg"
             Tags={testTags}
           />
           <ContentItem
             Right={true}
             Name="Linus Sex Tips"
-            Year={2069}
+            Content={2069}
             ImgName="Linus.jpg"
             Tags={testTags}
           />
           <ContentItem
             Right={false}
             Name="Linus Sex Tips"
-            Year={2069}
+            Content={2069}
             ImgName="Linus.jpg"
             Tags={testTags}
           />

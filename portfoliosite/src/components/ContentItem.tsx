@@ -4,12 +4,13 @@ interface Props {
   ImgName: string;
   PageURL: string;
   Name: string;
-  Year: number;
+  Content: number;
   Tags: string[];
   Right: boolean;
+  onClick: onClick;
 }
 
-function ContentItem({ ImgName, PageURL, Name, Year, Tags, Right }: Props) {
+function ContentItem({ ImgName, PageURL, Name, Content, Tags, Right }: Props) {
   return (
     <div
       className={
@@ -32,7 +33,7 @@ function ContentItem({ ImgName, PageURL, Name, Year, Tags, Right }: Props) {
           ))}
         </div>
         <h1 className="project-name text header-text">{Name}</h1>
-        <h3 className="year text">{Year}</h3>
+        <h3 className="content text">{Content}</h3>
       </div>
     </div>
   );
