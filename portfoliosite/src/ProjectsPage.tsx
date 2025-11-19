@@ -13,22 +13,23 @@ function ProjectsPage({ Navigate }) {
       <div className="content-grid">
         <ContentItem
           Right={false}
-          Name="Linus Sex Tips"
+          Name="Linus Tech Tips"
           Content={2069}
           ImgName="Linus.jpg"
           Tags={testTags}
+          PageURL="App.tsx"
         />
         <ContentItem
           Right={true}
-          Name="Linus Sex Tips"
+          Name="Linus Tech Tips"
           Content={2069}
           ImgName="Linus.jpg"
           Tags={testTags}
-          Clickable={true}
+          PageURL="App.tsx"
         />
         <ContentItem
           Right={false}
-          Name="Linus Sex Tips"
+          Name="Linus Tech Tips"
           Content={2069}
           ImgName="Linus.jpg"
           Tags={testTags}

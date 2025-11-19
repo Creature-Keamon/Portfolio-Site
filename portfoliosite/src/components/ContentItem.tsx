@@ -8,7 +8,6 @@ interface Props {
   Tags: string[];
   Right: boolean;
   Navigate: (item: string) => void;
-  Clickable: boolean;
 }
 
 function ContentItem({
@@ -19,16 +18,15 @@ function ContentItem({
   Tags,
   Right = false,
   Navigate,
-  Clickable = false,
 }: Props) {
   return (
     <div
       className={
         "content-wrapper " +
-        (Clickable === true ? "clickable " : "") +
+        (PageURL.length > 0? "clickable " : "") +
         (Right === true ? "content-wrapper-right" : "content-wrapper-left")
       }
-      {...(Clickable ? { onClick: () => Navigate(PageURL) } : {})}
+      {...(PageURL.length > 0 ? { onClick: () => Navigate(PageURL) } : {})}
     >
       <div
         className={
