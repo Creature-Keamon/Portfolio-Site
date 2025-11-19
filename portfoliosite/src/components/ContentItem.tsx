@@ -7,17 +7,28 @@ interface Props {
   Content: number;
   Tags: string[];
   Right: boolean;
-  onClick: onClick;
+  Navigate: (item: string) => void;
+  Clickable: boolean;
 }
 
-function ContentItem({ ImgName, PageURL, Name, Content, Tags, Right }: Props) {
+function ContentItem({
+  ImgName,
+  PageURL = "",
+  Name,
+  Content,
+  Tags,
+  Right = false,
+  Navigate,
+  Clickable = false,
+}: Props) {
   return (
     <div
       className={
-        Right === true
-          ? "content-wrapper-right content-wrapper"
-          : "content-wrapper-left content-wrapper"
+        "content-wrapper " +
+        (Clickable === true ? "clickable " : "") +
+        (Right === true ? "content-wrapper-right" : "content-wrapper-left")
       }
+      {...(Clickable ? { onClick: () => Navigate(PageURL) } : {})}
     >
       <div
         className={

@@ -1,38 +1,14 @@
 import Page from "./components/Page";
 import ContentItem from "./components/ContentItem";
 import "./App.css";
+import { useState } from "react";
+import ProjectsPage from "./ProjectsPage";
 
 function App() {
-  const testTags = ["Hello"];
-  return (
-    <div>
-      <Page title="PROJECTS" filter={true}>
-        <div className="content-grid">
-          <ContentItem
-            Right={false}
-            Name="Linus Sex Tips"
-            Content={2069}
-            ImgName="Linus.jpg"
-            Tags={testTags}
-          />
-          <ContentItem
-            Right={true}
-            Name="Linus Sex Tips"
-            Content={2069}
-            ImgName="Linus.jpg"
-            Tags={testTags}
-          />
-          <ContentItem
-            Right={false}
-            Name="Linus Sex Tips"
-            Content={2069}
-            ImgName="Linus.jpg"
-            Tags={testTags}
-          />
-        </div>
-      </Page>
-    </div>
-  );
+  const [page, SetPage] = useState("Projects");
+  const navigate = (to) => SetPage(to);
+
+  return <div>{page === "Projects" && <ProjectsPage />};</div>;
 }
 
 export default App;
