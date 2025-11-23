@@ -14,8 +14,11 @@ function Page({ children, title, filter = false }: Props) {
   const arr = ["Programming", "3D Art", "Game Design", "Video Editing"];
   return (
     <div className="Bg">
-      <TopBar />
-      <CustomHeader text={title} />
+      <div className="header">
+        <TopBar />
+        <CustomHeader text={title} />
+      </div>
+
       {filter === true && <FilterWrapper filters={arr}></FilterWrapper>}
       {children}
     </div>

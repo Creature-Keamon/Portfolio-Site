@@ -18,14 +18,24 @@ body {
 
 .header-text {
     font-weight: 700;
+    
 }
 
 .custom-header {
-    text-align: right;
-    padding-right: 100px;
+    width: 0;
+    float: right;
     padding-top: 10px;
-    font-size: 100px;
+    font-size: 700%;
     font-weight: 900;
+    transform-origin: top left;
+    transform: rotate(90deg) translateY(10%) translateX(80px);
+
+}
+
+.header {
+    top: 0;
+    position: sticky;
+    z-index: 1;
 }
 
 /*TopBar styles*/
@@ -33,28 +43,29 @@ body {
 .top-bar {
     
     height: 60px;
-    background-color: rgba(221, 221, 221, 0.1);
+   /* background-color: rgba(221, 221, 221, 0.1);*/
     filter: blur(10px);
 }
 
 .top-bar-wrapper {
     position: sticky;
     top: 0;
-    z-index: 1;
+    
 }
 
 .return-button-wrapper {
-    padding-left: 100px;
+    padding-right: 58px;
     margin: auto;
-    top: 11px;
+    top: 21px;
     position: absolute;
+    right: 0;
 }
 
 /*Filter styles*/
 
 .filter-wrapper {
-    position: absolute;
-    top: 15%;
+    position: relative;
+    padding-top: 2%;
     padding-left: 100px;
     width: 40%;
 }
@@ -68,8 +79,10 @@ body {
 /*ContentItem styles */
 
 .content-grid {
+    width: 90%;
     display: grid;
     grid-template-columns: auto;
+
 }
 
 .content-wrapper-right {

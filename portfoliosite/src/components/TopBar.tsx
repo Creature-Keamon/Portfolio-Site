@@ -3,7 +3,6 @@ import Button from "./Button";
 function TopBar() {
   return (
     <div className="top-bar-wrapper">
-      <div className="top-bar"></div>
       <div className="return-button-wrapper">
         <Button onClick={() => console.log("Return Button Clickded")}>
           Open
