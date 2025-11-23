@@ -6,15 +6,15 @@ interface Props {
 }
 
 function ProjectsPage({ Navigate }: Props) {
-  const testTags = ["Hello", "I", "Am", "A", "Tag", "Yes"];
+  const testTags = ["Game Design", "3D Art", "Programming"];
   return (
     <Page title="PROJECTS" filter={true}>
       <div className="content-grid">
         <ContentItem
           Right={false}
-          Name="Linus Tech Tips"
-          Content="2069"
-          ImgName="Linus.jpg"
+          Name="Re-Make"
+          Content="Ongoing"
+          ImgName="Re-Make.png"
           Tags={testTags}
           PageURL="Project1"
           Navigate={Navigate}

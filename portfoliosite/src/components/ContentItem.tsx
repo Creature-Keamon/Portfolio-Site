@@ -23,13 +23,6 @@ function ContentItem({
 }: Props) {
   return (
     <div className="flavour-wrapper">
-      <img
-        className={
-          "flavour-item " +
-          (Right === true ? "flavour-item-right" : "flavour-item-left")
-        }
-        src={carspeen}
-      />
       <div
         className={
           "content-wrapper " +
@@ -61,6 +54,13 @@ function ContentItem({
           <h3 className="content text">{Content}</h3>
         </div>
       </div>
+      <img
+        className={
+          "flavour-item " +
+          (Right === true ? "flavour-item-right" : "flavour-item-left")
+        }
+        src={carspeen}
+      />
     </div>
   );
 }
