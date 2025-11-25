@@ -15,7 +15,7 @@ interface Props {
 function ContentItem({
   ImgName,
   PageURL = "",
-  Name,
+  Name = "",
   Content,
   Tags = [],
   Right = false,
@@ -33,25 +33,38 @@ function ContentItem({
         <div
           className={
             "main-content " +
-            (Right === true ? "main-content-right" : "main-content-left")
+            (Right === true
+              ? "main-content-right content-grid-right"
+              : "main-content-left content-grid-left")
           }
         >
-          <img
+          <div
             className={
-              "content-image " + (PageURL.length > 0 ? "clickable " : "")
+              "content-grid-item" + (Right === true ? "-right" : "-left")
             }
-            src={"src/assets/" + ImgName}
-          />
-          <div className="tag-wrapper">
-            {Tags.map((item) => (
-              <FilterButton onClick={() => {}} Clickable={false}>
-                {item}
-              </FilterButton>
-            ))}
+          >
+            <img
+              className={
+                "content-image " + (PageURL.length > 0 ? "clickable " : "")
+              }
+              src={"src/assets/" + ImgName}
+            />
+            <div className="tag-wrapper">
+              {Tags.map((item) => (
+                <FilterButton onClick={() => {}} Clickable={false}>
+                  {item}
+                </FilterButton>
+              ))}
+            </div>
           </div>
-
-          <h1 className="project-name text header-text">{Name}</h1>
-          <h3 className="content text">{Content}</h3>
+          <div
+            className={
+              "content-grid-item" + (Right === true ? "-left" : "-right")
+            }
+          >
+            <h1 className="project-name text header-text">{Name}</h1>
+            <h3 className="content text">{Content}</h3>
+          </div>
         </div>
       </div>
     </div>
