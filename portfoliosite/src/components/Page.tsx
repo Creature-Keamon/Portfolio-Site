@@ -21,12 +21,13 @@ function Page({
   subtitle = "",
   font,
   textColor,
-  backgroundColor
+  backgroundColor,
 }: Props) {
   const arr = ["Programming", "3D Art", "Game Design", "Video Editing"];
   return (
-    <div className="Bg" style={{backgroundColor: backgroundColor}}>
+    <div className="Bg" style={{ backgroundColor: backgroundColor }}>
       <div className="grid-item">
+        <TopBar />
         {filter === true ? (
           <FilterWrapper filters={arr}></FilterWrapper>
         ) : (
@@ -36,7 +37,6 @@ function Page({
       </div>
       <div className="grid-item">
         <div className="header">
-          <TopBar />
           <CustomHeader
             text={title}
             subheader={subtitle}

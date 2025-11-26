@@ -1,7 +1,7 @@
 /* Global Styles */
 
 html * {
-    /*font-family: 'Kumbh Sans';*/
+    font-family: 'Kumbh Sans';
 }
 
 body {
@@ -34,29 +34,33 @@ body {
     top: 0;
     position: sticky;
     z-index: 1;
+    float: right;
+    margin-right: min(1vw, 35px);
+    width: fit-content;
+    height:fit-content;
 }
 
 .custom-header {
     white-space: nowrap;
     width: 0;
     float: right;
-    padding-top: 10px;
     font-size: 7vw;
     font-weight: 900;
     transform-origin: top left;
-    transform: rotate(90deg) translateY(10%) translateX(80px);
-    
+    transform: rotate(90deg);
+    margin-top: 12px;    
 }
 
 .sub-header {
     white-space: nowrap;
     width: 0;
     float: right;
-    padding-top: 10px;
-    font-size: 3vw;
+    font-size: 4vw;
     font-weight: 900;
     transform-origin: top left;
-    transform: rotate(90deg) translateY(200%) translateX(85px);
+    transform: rotate(90deg);
+    margin-top: 21px;
+    margin-right: 7vw;
 }
 
 
@@ -74,11 +78,9 @@ body {
 }
 
 .return-button-wrapper {
-    padding-right: 75px;
+    padding-left: 100px;
     margin: auto;
-    top: 21px;
-    position: absolute;
-    right: 0;
+    margin-top: 21px;
 }
 
 /*Filter styles*/

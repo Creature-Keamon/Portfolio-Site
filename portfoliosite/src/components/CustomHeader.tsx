@@ -5,16 +5,9 @@ interface Props {
   subheader: string;
   font: string;
   textColor: string;
-  buttonRedirects: string[];
 }
 
-function CustomHeader({
-  text,
-  subheader = "",
-  font,
-  textColor,
-  buttonRedirects,
-}: Props) {
+function CustomHeader({ text, subheader = "", font, textColor }: Props) {
   return (
     <div className="header-wrapper">
       <h1
@@ -29,7 +22,7 @@ function CustomHeader({
       >
         {subheader}
       </h3>
-      {buttonRedirects.length > 0 && <Button onClick={()} colour="secondary">Hello</Button>}
+      <Button></Button>
     </div>
   );
 }
