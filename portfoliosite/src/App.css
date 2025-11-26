@@ -1,7 +1,7 @@
 /* Global Styles */
 
 html * {
-    font-family: 'Kumbh Sans';
+    /*font-family: 'Kumbh Sans';*/
 }
 
 body {
@@ -28,6 +28,9 @@ body {
 .header {
     animation: slideTop 2s;
     height: 100%;
+}
+
+.header-wrapper {
     top: 0;
     position: sticky;
     z-index: 1;
@@ -61,7 +64,7 @@ body {
 
 .top-bar {
     height: 60px;
-    background-color: rgba(221, 221, 221, 0.1);
+    /*background-color: rgba(221, 221, 221, 0.1);*/
     filter: blur(10px);
 }
 
@@ -86,7 +89,7 @@ body {
     padding-left: 100px;
     width: 40%;
     height: 5%;
-    animation: slideRight 2s;
+    animation: slideRight 1s;
 }
 
 .filter-button {
@@ -100,16 +103,17 @@ body {
 .content-grid {
     display: grid;
     grid-template-columns: auto;
-
 }
 
 .content-wrapper-right {
     margin-right: 50px;
     justify-self: end;
     position: relative;
+    animation: scaleIn 1s ;
 }
 
 .content-wrapper-left {
+    animation: scaleIn 1s;
     margin-left: 100px;
     position: relative;
 }
@@ -119,13 +123,28 @@ body {
     height: 100%;
 }
 
+.project-page-item {
+    width: 80%;
+}
+
 .flavour-wrapper {
-    margin-top: 10%;
+    margin-top: 5%;
+}
+.content-image-wrapper {
+    aspect-ratio: 16 / 9;
+    border-radius: 20%;
+    border-collapse: separate;
 }
 
 .content-image {
+    overflow: hidden;
+    display: block;
     width: 100%;
-    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
 }
 
 .tag-wrapper {
@@ -150,7 +169,6 @@ body {
     top: 0;
     right: 1;
 }
-
 
 /*Clickable animations*/
 
@@ -184,3 +202,7 @@ body {
     100% {transform: translateX(0px);}
 }
 
+@keyframes scaleIn {
+    0% {transform: scale(0%);}
+    100% {transform: scale(100%);}
+}

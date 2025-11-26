@@ -1,5 +1,4 @@
 import FilterButton from "./FilterButton";
-import carspeen from "../assets/carspeen/carspeen.gif";
 
 interface Props {
   ImgName: string;
@@ -26,7 +25,8 @@ function ContentItem({
       <div
         className={
           "content-wrapper " +
-          (Right === true ? "content-wrapper-right" : "content-wrapper-left")
+          (Right === true ? "content-wrapper-right" : "content-wrapper-left") +
+          (PageURL.length === 0 ? " project-page-item" : "")
         }
         {...(PageURL.length > 0 ? { onClick: () => Navigate(PageURL) } : {})}
       >
@@ -43,12 +43,14 @@ function ContentItem({
               "content-grid-item" + (Right === true ? "-right" : "-left")
             }
           >
-            <img
-              className={
-                "content-image " + (PageURL.length > 0 ? "clickable " : "")
-              }
-              src={"src/assets/" + ImgName}
-            />
+            <div className="content-image-wrapper">
+              <img
+                className={
+                  "content-image " + (PageURL.length > 0 ? "clickable " : "")
+                }
+                src={"src/assets/" + ImgName}
+              />
+            </div>
             <div className="tag-wrapper">
               {Tags.map((item) => (
                 <FilterButton onClick={() => {}} Clickable={false}>

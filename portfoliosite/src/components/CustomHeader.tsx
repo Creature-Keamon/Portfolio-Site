@@ -1,13 +1,25 @@
 interface Props {
   text: string;
   subheader: string;
+  font: string;
+  textColor: string;
 }
 
-function CustomHeader({ text, subheader = "" }: Props) {
+function CustomHeader({ text, subheader = "", font, textColor }: Props) {
   return (
     <div className="header-wrapper">
-      <h1 className="custom-header text header-text">{text}</h1>;
-      <h3 className="sub-header text header-text">{subheader}</h3>
+      <h1
+        className="custom-header text header-text"
+        style={{ fontFamily: font, color: textColor }}
+      >
+        {text}
+      </h1>
+      <h3
+        className="sub-header text header-text"
+        style={{ fontFamily: font, color: textColor }}
+      >
+        {subheader}
+      </h3>
     </div>
   );
 }

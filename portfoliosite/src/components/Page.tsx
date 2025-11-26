@@ -7,11 +7,20 @@ interface Props {
   title: string;
   filter: boolean;
   subtitle: string;
+  font: string;
+  textColor: string;
 }
 
 /*creates a page within some formatting rules and populates it with 
 it's given props*/
-function Page({ children, title, filter = false, subtitle = "" }: Props) {
+function Page({
+  children,
+  title,
+  filter = false,
+  subtitle = "",
+  font,
+  textColor,
+}: Props) {
   const arr = ["Programming", "3D Art", "Game Design", "Video Editing"];
   return (
     <div className="Bg">
@@ -26,7 +35,12 @@ function Page({ children, title, filter = false, subtitle = "" }: Props) {
       <div className="grid-item">
         <div className="header">
           <TopBar />
-          <CustomHeader text={title} subheader={subtitle} />
+          <CustomHeader
+            text={title}
+            subheader={subtitle}
+            font={font}
+            textColor={textColor}
+          />
         </div>
       </div>
     </div>
