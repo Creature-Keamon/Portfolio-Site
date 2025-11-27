@@ -5,7 +5,9 @@ interface Props {
   subheader: string;
   font: string;
   textColor: string;
-  relevantLinks: string[];
+  buttonLinks: string[];
+  buttonImages: string[];
+  buttonText: string[];
 }
 
 function CustomHeader({
@@ -13,8 +15,14 @@ function CustomHeader({
   subheader = "",
   font,
   textColor,
-  relevantLinks,
+  buttonLinks,
+  buttonText,
+  buttonImages,
 }: Props) {
+  const openLink = (url: string) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div className="header-wrapper">
       <h1
@@ -29,10 +37,17 @@ function CustomHeader({
       >
         {subheader}
       </h3>
-      {relevantLinks?.length > 0 && (
+      {buttonLinks?.length > 0 && (
         <div className="external-buttons">
-          {relevantLinks.map((item: string) => (
-            <Button colour="secondary">{item}</Button>
+          {buttonLinks.map((link: string, i: number) => (
+            <Button
+              colour="secondary"
+              key={i}
+              onClick={() => openLink(link)}
+              imageFile={buttonImages[i]}
+            >
+              {buttonText[i]}
+            </Button>
           ))}
         </div>
       )}
