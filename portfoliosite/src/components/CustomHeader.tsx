@@ -5,9 +5,16 @@ interface Props {
   subheader: string;
   font: string;
   textColor: string;
+  relevantLinks: string[];
 }
 
-function CustomHeader({ text, subheader = "", font, textColor }: Props) {
+function CustomHeader({
+  text,
+  subheader = "",
+  font,
+  textColor,
+  relevantLinks,
+}: Props) {
   return (
     <div className="header-wrapper">
       <h1
@@ -22,7 +29,13 @@ function CustomHeader({ text, subheader = "", font, textColor }: Props) {
       >
         {subheader}
       </h3>
-      <Button></Button>
+      {relevantLinks?.length > 0 && (
+        <div className="external-buttons">
+          {relevantLinks.map((item: string) => (
+            <Button colour="secondary">{item}</Button>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

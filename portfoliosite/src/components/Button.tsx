@@ -1,5 +1,5 @@
 interface Props {
-  children: string;
+  children: React.ReactNode;
   colour?: "primary" | "secondary" | "danger" | "success";
   onClick: () => void;
 }
