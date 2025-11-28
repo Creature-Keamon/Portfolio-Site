@@ -19,7 +19,7 @@ body {
     grid-template-columns: 85% 15%;
 }
 
-/*header text styles*/
+/*header styles*/
 
 .header-text {
     font-weight: 700;   
@@ -63,11 +63,21 @@ body {
 }
 
 .external-buttons {
-    width: 100%;
+    width: 70%;
     padding-right: 17%;
     float:right;
     margin-top: 31vw;
     display: grid;
+}
+
+.single-button {
+    width: fit-content;
+}
+
+.button-image {
+    width: 30%;
+    fill-opacity: 50%;
+    margin-right: 10%;
 }
 
 /*TopBar styles*/

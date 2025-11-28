@@ -10,7 +10,9 @@ interface Props {
   font: string;
   textColor: string;
   backgroundColor: string;
-  relevantLinks: string[];
+  buttonLinks: string[];
+  buttonText: string[];
+  buttonImages: string[];
 }
 
 /*creates a page within some formatting rules and populates it with 
@@ -23,7 +25,9 @@ function Page({
   font,
   textColor,
   backgroundColor,
-  relevantLinks,
+  buttonLinks,
+  buttonText,
+  buttonImages,
 }: Props) {
   const arr = ["Programming", "3D Art", "Game Design", "Video Editing"];
   return (
@@ -40,7 +44,9 @@ function Page({
       <div className="grid-item">
         <div className="header">
           <CustomHeader
-            relevantLinks={relevantLinks}
+            buttonLinks={buttonLinks}
+            buttonImages={buttonImages}
+            buttonText={buttonText}
             text={title}
             subheader={subtitle}
             font={font}

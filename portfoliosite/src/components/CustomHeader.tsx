@@ -2,12 +2,12 @@ import Button from "./Button";
 
 interface Props {
   text: string;
-  subheader: string;
-  font: string;
-  textColor: string;
+  subheader?: string;
+  font?: string;
+  textColor?: string;
   buttonLinks: string[];
-  buttonImages: string[];
-  buttonText: string[];
+  buttonImages?: string[];
+  buttonText?: string[];
 }
 
 function CustomHeader({
@@ -15,9 +15,9 @@ function CustomHeader({
   subheader = "",
   font,
   textColor,
-  buttonLinks,
-  buttonText,
-  buttonImages,
+  buttonLinks = [],
+  buttonText = [],
+  buttonImages = [],
 }: Props) {
   const openLink = (url: string) => {
     window.open(url, "_blank", "noopener,noreferrer");

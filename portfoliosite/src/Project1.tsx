@@ -1,8 +1,11 @@
 import Page from "./components/Page";
 import ContentItem from "./components/ContentItem";
+import githublogo from "./assets/githublogo.svg";
+import youtubelogo from "./assets/youtubelogo.svg";
 
 function Project1() {
   const arr = ["hello", "test"];
+  const images = [githublogo, youtubelogo];
   return (
     <Page
       title="RE-MAKE"
@@ -11,7 +14,9 @@ function Project1() {
       font="Verdana"
       textColor="rgba(255, 255, 255, 1)"
       backgroundColor="rgba(0, 0, 102, 1)"
-      relevantLinks={arr}
+      buttonLinks={arr}
+      buttonText={arr}
+      buttonImages={images}
     >
       <ContentItem
         Content={
