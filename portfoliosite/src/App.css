@@ -63,8 +63,8 @@ body {
 }
 
 .external-buttons {
-    width: 70%;
-    padding-right: 17%;
+    width: 80%;
+    padding-right: 13%;
     float:right;
     margin-top: 31vw;
     display: grid;
@@ -72,12 +72,23 @@ body {
 
 .single-button {
     width: fit-content;
+    height: 5%;
+}
+
+.button-grid-wrapper {
+    display: grid;
+    height: 5%;
+    grid-template-columns: 30% 70%;
+    column-gap: 5%;
+    place-items: center;
 }
 
 .button-image {
-    width: 30%;
-    fill-opacity: 50%;
-    margin-right: 10%;
+    width: 100%;
+}
+
+.button-text {
+    font-size: 1vw;
 }
 
 /*TopBar styles*/

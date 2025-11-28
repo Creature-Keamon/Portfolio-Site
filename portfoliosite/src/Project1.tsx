@@ -1,11 +1,9 @@
 import Page from "./components/Page";
 import ContentItem from "./components/ContentItem";
-import githublogo from "./assets/githublogo.svg";
-import youtubelogo from "./assets/youtubelogo.svg";
 
 function Project1() {
-  const arr = ["hello", "test"];
-  const images = [githublogo, youtubelogo];
+  const arr = ["Github", "Youtube"];
+  const images = ["githublogo", "youtubelogo"];
   return (
     <Page
       title="RE-MAKE"

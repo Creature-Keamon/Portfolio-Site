@@ -1,6 +1,5 @@
-import React from "react";
-import youtubelogo from "../assets/youtubelogo.svg?react";
-import githublogo from "../assets/githublogo.svg?react";
+import githublogo from "../assets/githublogo.svg";
+import youtubelogo from "../assets/youtubelogo.svg";
 
 interface Props {
   children: React.ReactNode;
@@ -15,10 +14,6 @@ function Button({
   colour = "primary",
   imageFile,
 }: Props) {
-  const iconArray = [youtubelogo, githublogo];
-  const icon = iconArray.find(function (element) {
-    return element === imageFile;
-  });
   return (
     <div className="single-button">
       <button
@@ -27,7 +22,17 @@ function Button({
         //style="--btn-border-width: .25rm;"
         onClick={onClick}
       >
-        {children}
+        <div className="button-grid-wrapper">
+          <div className="button-grid-item">
+            {imageFile === "githublogo" && (
+              <img className="button-image" src={githublogo}></img>
+            )}
+            {imageFile === "youtubelogo" && (
+              <img className="button-image" src={youtubelogo}></img>
+            )}
+          </div>
+          <div className="button-grid-item button-text">{children}</div>
+        </div>
       </button>
     </div>
   );
