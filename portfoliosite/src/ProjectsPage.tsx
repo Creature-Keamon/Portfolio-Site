@@ -50,12 +50,13 @@ function ProjectsPage({ Navigate }: Props) {
     if (filter === "All") {
       setContent(Projects);
     } else {
-      const filteredPage = Projects.filter((Project: any) => {
-        return Project.Tags.find((tag: string) => {
-          return tag === filter;
-        });
-      });
-      setContent(filteredPage);
+      setContent(
+        Projects.filter((Project: any) => {
+          return Project.Tags.find((tag: string) => {
+            return tag === filter;
+          });
+        })
+      );
     }
   };
 
