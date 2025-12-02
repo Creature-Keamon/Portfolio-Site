@@ -1,4 +1,5 @@
 import FilterButton from "./FilterButton";
+import { motion } from "motion/react";
 
 interface Props {
   ImgName: string;
@@ -21,13 +22,19 @@ function ContentItem({
   Navigate,
 }: Props) {
   return (
-    <div
+    <motion.div
       className={
         "content-wrapper " +
         (Right === true ? "content-wrapper-right" : "content-wrapper-left") +
         (PageURL.length === 0 ? " project-page-item" : "")
       }
-      {...(PageURL.length > 0 ? { onClick: () => Navigate(PageURL) } : {})}
+      {...(PageURL.length > 0
+        ? {
+            onClick: () => Navigate(PageURL),
+            whileHover: { scale: 1.03 },
+            whileTap: { scale: 0.9 },
+          }
+        : {})}
     >
       <div
         className={
@@ -67,7 +74,7 @@ function ContentItem({
           <h3 className="content text">{Content}</h3>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

@@ -19,10 +19,6 @@ function CustomHeader({
   buttonText = [],
   buttonImages = [],
 }: Props) {
-  const openLink = (url: string) => {
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
-
   return (
     <div className="header-wrapper">
       <div className="header-grid">

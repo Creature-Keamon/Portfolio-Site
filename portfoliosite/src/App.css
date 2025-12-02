@@ -17,6 +17,7 @@ body {
 .Bg {
     display: grid;
     grid-template-columns: 85% 15%;
+    height: 100%;
 }
 
 /*header styles*/
@@ -113,6 +114,17 @@ body {
     padding-top: 21px;
 }
 
+/*Navigation Page styles*/
+
+.disk-wrapper {
+    height: 200vh;
+}
+
+.scroll-disk {
+    position: fixed;
+    top: 0;
+}
+
 /*Filter styles*/
 
 .filter-wrapper {
@@ -202,18 +214,6 @@ body {
 }
 
 /*Clickable animations*/
-
-@keyframes hoverClickable {
-    0% {filter: drop-shadow(0px,0px);}
-    100% {filter: drop-shadow(10px 10px);}
-    
-}
-
-@keyframes unhoverClickable{
-    0% {filter: drop-shadow(10px 10px);}
-    100% {filter: drop-shadow(0px,0px);}
-}
-
 .clickable:hover {
     cursor: pointer; 
     animation: hoverClickable 0.2s forwards;

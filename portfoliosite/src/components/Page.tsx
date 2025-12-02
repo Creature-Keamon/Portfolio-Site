@@ -15,6 +15,7 @@ interface Props {
   buttonText: string[];
   buttonImages: string[];
   filterItem: (filter: string) => void;
+  Navigate: (link: string) => void;
 }
 
 /*creates a page within some formatting rules and populates it with 
@@ -31,11 +32,12 @@ function Page({
   buttonText,
   buttonImages,
   filterItem,
+  Navigate,
 }: Props) {
   return (
     <div className="Bg" style={{ backgroundColor: backgroundColor }}>
       <div className="grid-item">
-        <TopBar />
+        <TopBar Navigate={Navigate} />
         {filter === true ? (
           <FilterWrapper filterItem={filterItem}></FilterWrapper>
         ) : (

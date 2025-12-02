@@ -13,7 +13,7 @@ function Project1() {
       subtitle="2025"
       font=""
       textColor="rgba(255, 255, 255, 1)"
-      backgroundColor="rgba(0, 0, 102, 1)"
+      backgroundColor="rgba(36, 110, 18, 0.53)"
       buttonLinks={links}
       buttonText={arr}
       buttonImages={images}

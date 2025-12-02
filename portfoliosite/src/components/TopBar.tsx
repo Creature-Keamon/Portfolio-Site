@@ -1,12 +1,14 @@
 import Button from "./Button";
 
-function TopBar() {
+interface Props {
+  Navigate: (item: string) => void;
+}
+
+function TopBar({ Navigate }: Props) {
   return (
     <div className="top-bar-wrapper">
       <div className="return-button-wrapper">
-        <Button onClick={() => console.log("Return Button Clickded")}>
-          Open
-        </Button>
+        <Button onClick={() => Navigate("Home")}>Open</Button>
       </div>
     </div>
   );
