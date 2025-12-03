@@ -120,14 +120,26 @@ body {
 .disk-wrapper {
     position: sticky;
     top: 0;
-    height: 70vw;
+    overflow: hidden;
     margin-left: 15vw;
     width: 70vw;
 }
 
-.scroll-disk {
-    position: fixed;
-    top: 0;
+.scroll-svg {
+    display: block;
+    position: absolute;
+    top: -35vw;
+    margin: auto;
+    
+}
+
+.scroll-circle {
+    display: block;
+    margin: auto;
+}
+
+.minor-circle {
+    cursor: pointer;
 }
 
 /*Filter styles*/
