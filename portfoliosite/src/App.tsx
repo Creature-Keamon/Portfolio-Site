@@ -5,7 +5,7 @@ import ProjectsPage from "./ProjectsPage";
 import RotatingDisk from "./Nav";
 
 function App() {
-  const [page, SetPage] = useState("Projects");
+  const [page, SetPage] = useState("Home");
   const navigate = (to: string) => SetPage(to);
 
   return (

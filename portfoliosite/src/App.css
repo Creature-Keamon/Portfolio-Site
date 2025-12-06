@@ -129,6 +129,7 @@ body {
     margin-left: 15vw;
     width: 70vw;
     height: fit-content;
+    cursor: grab;
 }
 
 .scroll-svg {
@@ -145,17 +146,17 @@ body {
     margin-top: -2.5%;
 }
 .contact-disk {
-    transform: translateX(60%);
+    transform: translateY(60%);
     rotate: 120deg;
 }
 
 .project-disk {
-    transform: translateX(60%);
+    transform: translateY(60%);
 }
 
 .about-disk {
     rotate: -120deg;
-    transform: translateX(60%);
+    transform: translateY(60%);
 }
 
 .cd {

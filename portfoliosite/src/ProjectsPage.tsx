@@ -39,7 +39,7 @@ function ProjectsPage({ Navigate }: Props) {
     {
       Name: '"To Reminisce"',
       Year: "2025",
-      ImgName: "Linus.jpg",
+      ImgName: "Reminisce.png",
       Tags: ["Filmmaking", "Video Editing"],
       PageURL: "Project1",
     },
