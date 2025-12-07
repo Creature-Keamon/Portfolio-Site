@@ -1,21 +1,35 @@
-import { motion, transform, useMotionValue, useSpring } from "motion/react";
+import { motion, useMotionValue, useSpring } from "motion/react";
 import PlayerDisk from "./components/PlayerDisk";
 import { useRef, useState } from "react";
 import PlayerBar from "./components/PlayerBar";
 import Disk from "./components/Disk";
-import { animate } from "motion";
 
 interface Props {
   Navigate: (item: string) => void;
 }
 
 function RotatingDisk({ Navigate }: Props) {
+  document.body.style.backgroundColor = "rgba(87, 87, 87, 1)";
+  document.body.style.overflow = "hidden";
   const [retract, setRetract] = useState(false);
+  const [extend, setExtend] = useState(false);
+
   const openPage = (link: string) => {
     setRetract(true);
     setTimeout(() => {
       Navigate(link);
     }, 2500);
+  };
+
+  const jokeDiskAction = () => {
+    setRetract(true);
+    setTimeout(() => {
+      setExtend(true);
+      setRetract(false);
+    }, 2500);
+    setTimeout(() => {
+      setExtend(false);
+    }, 2000);
   };
 
   const rotation = useMotionValue(0);
@@ -46,11 +60,18 @@ function RotatingDisk({ Navigate }: Props) {
                 transition: { ease: "linear", duration: 2 },
               }
             : {})}
+          {...(extend === true
+            ? {
+                animate: { y: 0 },
+                transition: { ease: "linear", duration: 2 },
+              }
+            : {})}
         >
           <PlayerDisk />
           <Disk type="about" onClick={() => openPage("About")} />
           <Disk type="contact" onClick={() => openPage("Contact")} />
           <Disk type="project" onClick={() => openPage("Projects")} />
+          <Disk type="joke" onClick={() => jokeDiskAction()} />
         </motion.svg>
       </motion.div>
     </div>

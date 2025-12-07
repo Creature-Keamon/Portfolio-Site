@@ -118,7 +118,6 @@ body {
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    background-color: wheat;
 }
 
 .nav-wrapper::-webkit-scrollbar {
@@ -145,23 +144,23 @@ body {
     z-index: 2;
     margin-top: -2.5%;
 }
-.contact-disk {
-    transform: translateY(60%);
-    rotate: 120deg;
-}
 
-.project-disk {
-    transform: translateY(60%);
+.contact-disk {
+    rotate: 90deg;
 }
 
 .about-disk {
-    rotate: -120deg;
-    transform: translateY(60%);
+    rotate: -90deg;  
+}
+
+.joke-disk {
+    rotate: 180deg;
 }
 
 .cd {
+    transform: translateY(70%);
     transform-origin: 50% 50%;
-    scale:45%;
+    scale:40%;
     z-index: 1;
     position: absolute;
     cursor: pointer;
