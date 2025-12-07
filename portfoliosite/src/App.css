@@ -83,30 +83,34 @@ body {
 .return-button-wrapper {
     padding-left: 100px;
     padding-top: 21px;
-    width: 60%;
+    width: fit-content;
     display: grid;
     grid-template-columns: auto auto auto auto;
     column-gap: 10px;
 }
 
-.external-buttons {
-    width: 30%;
-    display: grid;
+.btn-secondary {
+    width: 8vw;
 }
 
+.internal-buttons {
+    height:50%;
+    width: fit-content;
+}
 
 .button-grid-wrapper {
     display: grid;
     grid-template-columns: 30% 70%;
-    column-gap: 5%;
     place-items: center;
+
 }
 
 .button-image {
-    width: 100%;
+    width: 70%;
 }
 
 .button-text {
+    width: 100%;
     font-size: 1vw;
 }
 
@@ -172,10 +176,14 @@ body {
     animation: slideRight 1s;
 }
 
-.filter-button {
+.filter-button-wrapper {
     margin-bottom: 10px;
     margin-right: 10px;
     size: 1vw;
+}
+
+.btn-success {
+    margin: 5px;
 }
 
 /*ContentItem styles */
@@ -233,9 +241,7 @@ body {
     pointer-events: none;
 }
 
-.btn-secondary {
-    margin: 5px;
-}
+
 
 .project-name {
     margin-top: 5px;

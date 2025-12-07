@@ -13,29 +13,34 @@ const openLink = (url: string) => {
 
 function TopBar({
   Navigate,
-  buttonLinks,
+  buttonLinks = [],
   buttonText = [],
   buttonImages = [],
 }: Props) {
   return (
     <div className="top-bar-wrapper">
       <div className="return-button-wrapper">
-        <Button onClick={() => Navigate("Home")}>Open</Button>
-        <Button onClick={() => Navigate("Projects")}>Return to Projects</Button>
-        {buttonLinks != null && (
-          <div className="external-buttons">
-            {buttonLinks.map((link: string, i: number) => (
-              <Button
-                colour="secondary"
-                key={i}
-                onClick={() => openLink(link)}
-                imageFile={buttonImages[i]}
-              >
-                {buttonText[i]}
-              </Button>
-            ))}
+        <div className="internal-button">
+          <Button onClick={() => Navigate("Home")}>Open</Button>
+        </div>
+        <div className="internal-button">
+          <Button onClick={() => Navigate("Projects")}>
+            Return to Projects
+          </Button>
+        </div>
+
+        {buttonLinks.map((link: string, i: number) => (
+          <div className="external-button">
+            <Button
+              colour="secondary"
+              key={i}
+              onClick={() => openLink(link)}
+              imageFile={buttonImages[i]}
+            >
+              {buttonText[i]}
+            </Button>
           </div>
-        )}
+        ))}
       </div>
     </div>
   );
