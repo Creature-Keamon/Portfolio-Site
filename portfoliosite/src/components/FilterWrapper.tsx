@@ -1,5 +1,5 @@
 import FilterButton from "./FilterButton";
-import Filters from "../assets/FiltersList";
+import Filters from "../assets/data/FiltersList";
 
 interface Props {
   filterItem: (filter: string) => void;

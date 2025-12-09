@@ -2,35 +2,41 @@ import FilterButton from "./FilterButton";
 import { motion } from "motion/react";
 
 interface Props {
-  ImgName: string;
-  FlavName?: string;
-  PageURL?: string;
-  Name?: string;
-  Content: React.ReactNode;
-  Tags?: string[];
-  Right?: boolean;
-  Navigate?: (item: string) => void;
+  font?: string;
+  imgName: string;
+  pageURL?: string;
+  name?: string;
+  content: React.ReactNode;
+  tags?: string[];
+  right?: boolean;
+  header?: boolean;
+  navigate?: (item: string) => void;
 }
 
 function ContentItem({
-  ImgName,
-  PageURL,
-  Name,
-  Content,
-  Tags = [],
-  Right = false,
-  Navigate,
+  imgName,
+  pageURL,
+  name,
+  content,
+  tags = [],
+  right = false,
+  navigate,
+  font,
+  header = true,
 }: Props) {
   return (
     <motion.div
       className={
         "content-wrapper " +
-        (Right === true ? "content-wrapper-right" : "content-wrapper-left") +
-        (PageURL === null ? " project-page-item" : "")
+        (right === true ? "content-wrapper-right" : "content-wrapper-left") +
+        (pageURL === null ? " project-page-item" : "")
       }
-      {...(PageURL != null && Navigate != null
+      {...(header === true
+        ? { style: { width: "60%" } }
+        : { style: { width: "80%" } })}
+      {...(pageURL != null && navigate != null
         ? {
-            onClick: () => Navigate(PageURL),
+            onClick: () => navigate(pageURL),
             whileHover: { scale: 1.03 },
             whileTap: { scale: 0.9 },
           }
@@ -39,24 +45,26 @@ function ContentItem({
       <div
         className={
           "main-content " +
-          (Right === true ? " content-grid-right" : " content-grid-left")
+          (right === true ? " content-grid-right" : " content-grid-left")
         }
       >
         <div
           className={
-            "content-grid-item" + (Right === true ? "-right" : "-left")
+            "content-grid-item" + (right === true ? "-right" : "-left")
           }
         >
           <div className="content-image-wrapper">
             <img
               className={
-                "content-image " + (PageURL != null ? "clickable " : "")
+                "content-image" +
+                (pageURL != null ? " clickable" : "") +
+                (header === false ? " flavour-image" : "")
               }
-              src={"src/assets/" + ImgName}
+              src={"src/assets/" + imgName}
             />
           </div>
           <div className="tag-wrapper">
-            {Tags.map((item, index) => (
+            {tags.map((item, index) => (
               <FilterButton onClick={() => {}} key={index}>
                 {item}
               </FilterButton>
@@ -65,11 +73,18 @@ function ContentItem({
         </div>
         <div
           className={
-            "content-grid-item" + (Right === true ? "-left" : "-right")
+            "content-grid-item" + (right === true ? "-left" : "-right")
           }
         >
-          <h1 className="project-name text header-text">{Name}</h1>
-          <h3 className="content text">{Content}</h3>
+          <h1
+            className="project-name text header-text"
+            style={{ fontFamily: font }}
+          >
+            {name}
+          </h1>
+          <h3 className="content text" style={{ fontFamily: font }}>
+            {content}
+          </h3>
         </div>
       </div>
     </motion.div>

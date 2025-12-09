@@ -6,6 +6,7 @@ interface Props {
   buttonImages?: string[];
   buttonText?: string[];
   pageName?: string;
+  font?: string;
 }
 
 const openLink = (url: string) => {
@@ -18,6 +19,7 @@ function TopBar({
   buttonText = [],
   buttonImages = [],
   pageName = "",
+  font,
 }: Props) {
   return (
     <div className="top-bar-wrapper">
@@ -40,6 +42,7 @@ function TopBar({
               key={i}
               onClick={() => openLink(link)}
               imageFile={buttonImages[i]}
+              font={font}
             >
               {buttonText[i]}
             </Button>

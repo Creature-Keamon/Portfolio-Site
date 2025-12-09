@@ -1,7 +1,7 @@
 import Page from "../components/Page";
 import ContentItem from "../components/ContentItem";
 import { useState } from "react";
-import Projects from "../assets/ProjectList";
+import Projects from "../assets/data/ProjectList";
 
 interface Props {
   Navigate: (item: string) => void;
@@ -36,13 +36,13 @@ function ProjectsPage({ Navigate }: Props) {
         {content.map((Project, index) => {
           return (
             <ContentItem
-              Right={(index + 1) % 2 === 0 ? true : false}
-              Name={Project.Name}
-              Content={Project.Year}
-              ImgName={Project.ImgName}
-              Tags={Project.Tags}
-              PageURL={Project.PageURL}
-              Navigate={Navigate}
+              right={(index + 1) % 2 === 0 ? true : false}
+              name={Project.Name}
+              content={Project.Year}
+              imgName={Project.ImgName}
+              tags={Project.Tags}
+              pageURL={Project.PageURL}
+              navigate={Navigate}
               key={index}
             />
           );

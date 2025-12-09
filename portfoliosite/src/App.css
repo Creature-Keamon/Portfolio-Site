@@ -203,7 +203,6 @@ body {
 }
 
 .content-wrapper {
-    width: 60%;
     height: 100%;
     padding-bottom: 5%;
 }
@@ -228,6 +227,10 @@ body {
     border-radius: 5px;
 }
 
+.flavour-image {
+    
+}
+
 .tag-wrapper {
     width: 30%;
     padding-top: 10px;
@@ -235,8 +238,6 @@ body {
     right: 0;
     pointer-events: none;
 }
-
-
 
 .project-name {
     margin-top: 5px;

@@ -7,9 +7,11 @@ interface Props {
   colour?: "primary" | "secondary" | "danger" | "success";
   onClick: () => void;
   imageFile?: string;
+  font?: string;
 }
 
 function Button({
+  font,
   children,
   onClick = () => {},
   colour = "primary",
@@ -38,7 +40,9 @@ function Button({
           <div className="button-grid-item button-text">{children}</div>
         </div>
       ) : (
-        <div className="button-text">{children}</div>
+        <div className="button-text" style={{ fontFamily: font }}>
+          {children}
+        </div>
       )}
     </button>
   );
