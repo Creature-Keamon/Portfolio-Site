@@ -3,7 +3,8 @@ import "./App.css";
 import { useState } from "react";
 import ProjectsPage from "./pages/ProjectsPage";
 import RotatingDisk from "./pages/Nav";
-import Ammit from "./pages/Ammit";
+import ammitData from "./assets/data/ammitData";
+import SingleProject from "./pages/SingleProject";
 
 function App() {
   const [page, SetPage] = useState("Home");
@@ -14,7 +15,9 @@ function App() {
       {page === "Projects" && <ProjectsPage Navigate={navigate} />}
       {page === "Decommission" && <Decommisson Navigate={navigate} />}
       {page === "Home" && <RotatingDisk Navigate={navigate} />}
-      {page === "Ammit" && <Ammit Navigate={navigate} />}
+      {page === "Ammit" && (
+        <SingleProject Navigate={navigate} data={ammitData} />
+      )}
     </div>
   );
 }
