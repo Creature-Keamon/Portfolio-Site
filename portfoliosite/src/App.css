@@ -241,8 +241,8 @@ body {
 }
 
 .flavour-image {
-    width: 100%;
-    height: 100%;
+    width: 96.5%;
+    height: 96.5%;
 }
 
 .tag-wrapper {
@@ -259,6 +259,7 @@ body {
 
 .description-text {
     font-size: 1.15vw;
+    width: 80%;
 }
 
 .year-text {

@@ -4,51 +4,60 @@ const decommissionData = {
   buttonLinks: ["https://creaturekeamon.itch.io/decommission"],
   title: "DECOMMISSION",
   subtitle: "2025",
-  font: "",
-  textColor: "rgba(255, 255, 255, 0.8)",
-  backgroundColor: "rgba(75, 184, 75, 1)",
+  font: "Genos",
+  textColor: "#ffeac4ce",
+  backgroundColor: "#6b625cff",
   pageData: [
     {
       imgName: "Decommission.png",
       pageData: (
         <p>
-          Ammit the Truth is a deduction/detective based visual novel style
-          video game, using art styles influenced by games like 'Hades', and
-          gameplay reminiscent of games like 'Papers Please'. It sees the player
-          take the role of Anubis, the guardian of the egyptian afterlife, and
-          he must interview and interrogate each soul who seeks to enter the
-          afterlife to determine if they deserve entrance to the field of reeds
-          or to be devoured by Ammit.
+          Decommission is a small, proof of concept game where you, the player,
+          is a scrapper whose job it is to salvage valuable parts from old and
+          progressively larger and larger spacecraft. The larger the space ship,
+          the more valuables are inside, but require different tools to access.
+          <p></p>
+          For this project, I was a Game Designer,<p></p> Project Manager,
+          <p></p>Team Leader,<p></p> and 3D modeller.
         </p>
       ),
     },
     {
-      imgName: "Linus.jpg",
+      imgName: "Decommission3.png",
       pageData: (
         <p>
-          Our team had some incredible talent, especially in the art department,
-          and I am of the belief that our game is visually stunning. My
-          contribution was all over the place. I did 3D art, programming and
-          game design, but my greatest contributions were with project
-          management, writing of dialogue and planning. Creating this game was
-          truly a very enjoyable experience, but it was not without it's
-          hiccups. Two of our team members had frustratingly poor communication
-          and time management skills, and it was often the job of myself and our
-          2D artist to try and get them back on track, with great difficulty.
-          Due to this, much of the game was finished the day before it was due
-          to be handed in, placing us under a lot of stress.
+          From the ground up we wanted it to be a cozy, relaxing experience, so
+          this needed to be reflected in both the gameplay mechanics and the
+          visual aesthetics. For design, we chose a warm colour tone with a
+          small palette, and made all important elements starkly contrast
+          against the background without breaking style.
         </p>
       ),
     },
     {
-      imgName: "Linus.jpg",
+      imgName: "Decommission2.png",
       pageData: (
         <p>
-          Despite these hiccups, the resulting game was rather enjoyable to play
-          through, with some beautiful art to look at while doing so. I learnt
-          some valuable lessons about how to manage unmotivated teammates and do
-          project management. I am more experienced now with creating 3D models
-          with optimised topology and in game design philosophy and principles.
+          The player has access to multiple tools (and would be able to unlock
+          more if this was a full game), each with their own use cases. However,
+          we knew that if we designed our tools to be more realistic and
+          representative of themselves in real life, it would introduce extra
+          complexity, tedious-ness and the potential for some frustration.
+        </p>
+      ),
+    },
+    {
+      imgName: "Decommission1.png",
+      pageData: (
+        <p>
+          To ensure that our tools do not contrast against our cozy design
+          aesthetics, we designed the tool interactions to be boiled down to the
+          most basic (while still allowing for some nuance), but not boiled down
+          so much that the game just plays itself.
+          <p></p> I helped make the game fun, interesting to look at, and have
+          interesting mechanics, while ensuring that the games' core and
+          identity were not at all compromised on. <p></p> Decommission can be
+          downloaded from Itch.io from the link above.
         </p>
       ),
     },

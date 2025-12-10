@@ -25,7 +25,7 @@ const Projects = [
     Year: "2025",
     ImgName: "Reminisce.png",
     Tags: ["Filmmaking", "Video Editing"],
-    PageURL: "Project1",
+    PageURL: "Reminisce",
   },
 ];
 
