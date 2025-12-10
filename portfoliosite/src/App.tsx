@@ -1,4 +1,4 @@
-import Decommisson from "./pages/Decommission";
+import decommissionData from "./assets/data/decommissionData";
 import "./App.css";
 import { useState } from "react";
 import ProjectsPage from "./pages/ProjectsPage";
@@ -13,7 +13,7 @@ function App() {
   return (
     <div>
       {page === "Projects" && <ProjectsPage Navigate={navigate} />}
-      {page === "Decommission" && <Decommisson Navigate={navigate} />}
+      {page === "Decommission" && <SingleProject Navigate={navigate} data={decommissionData} />}
       {page === "Home" && <RotatingDisk Navigate={navigate} />}
       {page === "Ammit" && (
         <SingleProject Navigate={navigate} data={ammitData} />
