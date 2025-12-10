@@ -44,6 +44,7 @@ function ProjectsPage({ Navigate }: Props) {
               pageURL={Project.PageURL}
               navigate={Navigate}
               key={index}
+              header={true}
             />
           );
         })}

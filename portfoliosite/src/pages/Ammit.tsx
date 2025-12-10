@@ -41,6 +41,7 @@ function Ammit({ Navigate }: Props) {
               imgName={item.imgName}
               font={pageData.font}
               key={index}
+              header={index > 0 ? false : true}
             />
           );
         })}

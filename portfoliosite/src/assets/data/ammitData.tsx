@@ -3,18 +3,13 @@ const ammitData = [
     imgName: "Ammit.png",
     info: (
       <p>
-        Ammit the Truth is a deduction visual novel style video game, using art
-        styles influenced by games like 'Hades', and gameplay reminiscent of
-        games like 'Papers Please'. It sees the player take the role of Anubis,
-        the guardian of the egyptian afterlife, and he must interview and
-        interrogate each soul who seeks to enter the afterlife. However, some
-        souls may lie, decieve, withhold information or just attempt to barge
-        past. All of these souls are unworthy, and Anubis must correctly tell
-        determine the worthiness each soul, by correctly identifying
-        inconsistencies in speech, whether information is being withheld, or if
-        the soul is just straight up telling you why they are worthy or not. It
-        was created as part of a group project for a University Assignment,
-        which I completed with a small group of friends.
+        Ammit the Truth is a deduction/detective based visual novel style video
+        game, using art styles influenced by games like 'Hades', and gameplay
+        reminiscent of games like 'Papers Please'. It sees the player take the
+        role of Anubis, the guardian of the egyptian afterlife, and he must
+        interview and interrogate each soul who seeks to enter the afterlife to
+        determine if they deserve entrance to the field of reeds or to be
+        devoured by Ammit.
       </p>
     ),
   },

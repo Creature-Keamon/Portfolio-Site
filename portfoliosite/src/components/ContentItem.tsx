@@ -1,3 +1,5 @@
+import ContentText from "./ContentText";
+import ContentHero from "./ContentHero";
 import FilterButton from "./FilterButton";
 import { motion } from "motion/react";
 
@@ -22,7 +24,7 @@ function ContentItem({
   right = false,
   navigate,
   font,
-  header = true,
+  header,
 }: Props) {
   return (
     <motion.div
@@ -31,9 +33,9 @@ function ContentItem({
         (right === true ? "content-wrapper-right" : "content-wrapper-left") +
         (pageURL === null ? " project-page-item" : "")
       }
-      {...(header === true
-        ? { style: { width: "60%" } }
-        : { style: { width: "80%" } })}
+      {...(tags.length > 0
+        ? { style: { width: "70%" } }
+        : { style: { width: "90%" } })}
       {...(pageURL != null && navigate != null
         ? {
             onClick: () => navigate(pageURL),
@@ -42,51 +44,15 @@ function ContentItem({
           }
         : {})}
     >
-      <div
-        className={
-          "main-content " +
-          (right === true ? " content-grid-right" : " content-grid-left")
-        }
-      >
-        <div
-          className={
-            "content-grid-item" + (right === true ? "-right" : "-left")
-          }
-        >
-          <div className="content-image-wrapper">
-            <img
-              className={
-                "content-image" +
-                (pageURL != null ? " clickable" : "") +
-                (header === false ? " flavour-image" : "")
-              }
-              src={"src/assets/" + imgName}
-            />
-          </div>
-          <div className="tag-wrapper">
-            {tags.map((item, index) => (
-              <FilterButton onClick={() => {}} key={index}>
-                {item}
-              </FilterButton>
-            ))}
-          </div>
-        </div>
-        <div
-          className={
-            "content-grid-item" + (right === true ? "-left" : "-right")
-          }
-        >
-          <h1
-            className="project-name text header-text"
-            style={{ fontFamily: font }}
-          >
-            {name}
-          </h1>
-          <h3 className="content text" style={{ fontFamily: font }}>
-            {content}
-          </h3>
-        </div>
-      </div>
+      <ContentHero
+        imgName={imgName}
+        name={name}
+        tags={tags}
+        header={header}
+        right={right}
+        content={content}
+        font={font}
+      />
     </motion.div>
   );
 }
