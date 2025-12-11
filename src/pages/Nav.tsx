@@ -1,4 +1,4 @@
-import { motion, useMotionValue, useSpring, type PanInfo } from "motion/react";
+import { motion, useMotionValue, useSpring } from "motion/react";
 import PlayerDisk from "../components/PlayerDisk";
 import { useRef, useState } from "react";
 import PlayerBar from "../components/PlayerBar";
