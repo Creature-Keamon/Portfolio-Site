@@ -1,6 +1,4 @@
-import ContentText from "./ContentText";
 import ContentHero from "./ContentHero";
-import FilterButton from "./FilterButton";
 import { motion } from "motion/react";
 
 interface Props {

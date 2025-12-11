@@ -1,5 +1,4 @@
 import Page from "../components/Page";
-import ContentText from "../components/ContentText";
 import OtherText from "../components/Othertext";
 
 interface Props {

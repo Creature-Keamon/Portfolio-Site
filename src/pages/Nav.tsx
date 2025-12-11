@@ -1,4 +1,4 @@
-import { motion, useMotionValue, useSpring } from "motion/react";
+import { motion, useMotionValue, useSpring, type PanInfo } from "motion/react";
 import PlayerDisk from "../components/PlayerDisk";
 import { useRef, useState } from "react";
 import PlayerBar from "../components/PlayerBar";
@@ -57,8 +57,9 @@ function RotatingDisk({ Navigate }: Props) {
           width="70vw"
           xmlns="http://www.w3.org/2000/svg"
           className="scroll-svg"
-          onPan={(e, pointInfo) => {
-            rotation.set(-(lastRotation.current + pointInfo.offset.x * 0.1));
+          onPan={(e, info) => {
+            console.log(e);
+            rotation.set(-(lastRotation.current + info.offset.x * 0.1));
           }}
           style={{ rotate: turn }}
           onPanStart={() => {
