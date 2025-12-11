@@ -61,7 +61,7 @@ function RotatingDisk({ Navigate }: Props) {
             rotation.set(-(lastRotation.current + pointInfo.offset.x * 0.1));
           }}
           style={{ rotate: turn }}
-          onPanStart={(e, pointinfo) => {
+          onPanStart={() => {
             rotation.set(-0);
           }}
           {...(retract === true
