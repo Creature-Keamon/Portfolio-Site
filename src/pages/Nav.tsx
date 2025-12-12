@@ -85,6 +85,9 @@ function RotatingDisk({ Navigate }: Props) {
           <Disk type="joke" onClick={() => jokeDiskAction()} />
         </motion.svg>
       </motion.div>
+      <div className="under-construction-wrapper">
+        <h3>This website is under construction</h3>
+      </div>
     </motion.div>
   );
 }
