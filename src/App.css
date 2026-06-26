@@ -5,9 +5,9 @@ html * {
 }
 
 body {
-    background-color: rgb(29,32,33);
+    background-color: rgb(29, 32, 33);
     overflow-y: scroll;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 
@@ -18,14 +18,16 @@ body {
 
 .Bg {
     display: grid;
-    grid-template-columns: 85% 15%;
+    grid-template-columns: 10% 85%;
     height: 100%;
 }
 
 /*header styles*/
 
 .header-text {
-    font-weight: 700;   
+    font-weight: 700;
+    margin: 0;
+    margin-top: 10px;
 }
 
 .header {
@@ -37,33 +39,27 @@ body {
     top: 0;
     position: sticky;
     z-index: 1;
-    float: right;
     /*margin-right: min(1vw, 35px);*/
     width: 100%;
+    float: right;
 }
 
 .header-grid {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 50% 50%;
 }
 
 .custom-header {
+    font-weight: 900;
+    writing-mode: sideways-lr;
     word-break: break-all;
     font-size: 4.5vw;
-    font-weight: 900;
-    writing-mode:sideways-rl;
-    height: 100%;
-    margin-top: 12px;  
-    width: 50%;
-    float: left;
 }
 
 .sub-header {
-    font-size: 3.5vw;
     font-weight: 900;
-    writing-mode: sideways-rl;
-    margin-top: 12px;  
-    width: 50%;
+    writing-mode: sideways-lr;
+    font-size: 3.5vw;
 }
 
 /*TopBar styles*/
@@ -76,7 +72,7 @@ body {
 }
 
 .return-button-wrapper {
-    padding-left: 100px;
+    padding-left: 10px;
     padding-top: 21px;
     width: fit-content;
     display: grid;
@@ -89,7 +85,7 @@ body {
 }
 
 .internal-buttons {
-    height:50%;
+    height: 50%;
     width: fit-content;
 }
 
@@ -117,7 +113,7 @@ body {
 }
 
 .nav-wrapper::-webkit-scrollbar {
-    width: 0px; 
+    width: 0px;
 }
 
 .disk-wrapper {
@@ -135,7 +131,7 @@ body {
     animation: slideTop 3s ease-out;
 }
 
-.player-bar{
+.player-bar {
     position: absolute;
     z-index: 2;
     margin-top: -2.5%;
@@ -146,7 +142,7 @@ body {
 }
 
 .about-disk {
-    rotate: -90deg;  
+    rotate: -90deg;
 }
 
 .joke-disk {
@@ -156,7 +152,7 @@ body {
 .cd {
     transform: translateY(70%);
     transform-origin: 50% 50%;
-    scale:40%;
+    scale: 40%;
     z-index: 1;
     position: absolute;
     cursor: pointer;
@@ -169,12 +165,13 @@ body {
     margin-right: 1%;
     color: rgba(240, 240, 240, 0.6);
 }
+
 /*Filter styles*/
 
 .filter-wrapper {
     position: relative;
     padding-top: 2%;
-    padding-left: 100px;
+    padding-left: 10px;
     width: 40%;
     animation: slideRight 1s;
 }
@@ -186,7 +183,8 @@ body {
 }
 
 .btn-success {
-    margin: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
 }
 
 /*ContentItem styles */
@@ -206,27 +204,28 @@ body {
 }
 
 .content-wrapper-left {
-    margin-left: 10%;
+    margin-left: 10px;
 }
 
 .content-wrapper {
-    height: 100%;
-    padding-bottom: 5%;
+    height: 60%;
+    padding-bottom: 5px;
     position: relative;
-    animation: scaleIn 1s ;
+    animation: scaleIn 1s;
 }
 
 .project-content-grid-left {
     display: grid;
     grid-template-columns: 60% 40%;
 }
+
 .project-content-grid-right {
     display: grid;
     grid-template-columns: 40% 60%;
 }
 
 .project-page-item {
-    width: 80%;
+    width: 70%;
 }
 
 .content-image-wrapper {
@@ -285,14 +284,14 @@ body {
 
 .flavour-item {
     width: 10%;
-    position:absolute;
+    position: absolute;
     top: 0;
     right: 1;
 }
 
 /*About and Contact styles*/
 .other-text-wrapper {
-    padding-left:100px;
+    padding-left: 100px;
     width: 100%;
     font-size: 1.5vw;
     text-align: center;
@@ -301,21 +300,36 @@ body {
 
 /*Clickable animations*/
 .clickable:hover {
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 
 @keyframes slideTop {
-    0% {transform: translateY(-1000px);}
-    100% {transform: translateY(0px);}
+    0% {
+        transform: translateY(-1000px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 @keyframes slideRight {
-    0% {transform: translateX(-1000px);}
-    100% {transform: translateX(0px);}
+    0% {
+        transform: translateX(-1000px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
 }
 
 @keyframes scaleIn {
-    0% {transform: scale(0%);}
-    100% {transform: scale(100%);}
+    0% {
+        transform: scale(0%);
+    }
+
+    100% {
+        transform: scale(100%);
+    }
 }

@@ -32,14 +32,14 @@ function ContentItem({
         (pageURL === null ? " project-page-item" : "")
       }
       {...(tags.length > 0
-        ? { style: { width: "70%" } }
+        ? { style: { width: "60%" } }
         : { style: { width: "90%" } })}
       {...(pageURL != null && navigate != null
         ? {
-            onClick: () => navigate(pageURL),
-            whileHover: { scale: 1.03 },
-            whileTap: { scale: 0.9 },
-          }
+          onClick: () => navigate(pageURL),
+          whileHover: { scale: 1.03 },
+          whileTap: { scale: 0.9 },
+        }
         : {})}
     >
       <ContentHero

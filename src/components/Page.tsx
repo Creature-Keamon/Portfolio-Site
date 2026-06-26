@@ -42,6 +42,16 @@ function Page({
   return (
     <div className="Bg">
       <div className="grid-item">
+        <div className="header">
+          <CustomHeader
+            text={title}
+            subheader={subtitle}
+            font={font}
+            textColor={textColor}
+          />
+        </div>
+      </div>
+      <div className="grid-item">
         <TopBar
           Navigate={Navigate}
           {...(buttonLinks != null ? { buttonLinks: buttonLinks } : {})}
@@ -56,16 +66,6 @@ function Page({
           <div className="filter-wrapper"></div>
         )}
         {children}
-      </div>
-      <div className="grid-item">
-        <div className="header">
-          <CustomHeader
-            text={title}
-            subheader={subtitle}
-            font={font}
-            textColor={textColor}
-          />
-        </div>
       </div>
     </div>
   );
