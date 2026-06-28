@@ -12,12 +12,10 @@ function RotatingDisk({ Navigate }: Props) {
   document.body.style.backgroundColor = "rgba(87, 87, 87, 1)";
   document.body.style.overflow = "hidden";
   const [retract, setRetract] = useState(false);
-  const [loadpage, setLoadPage] = useState(false);
   const [extend, setExtend] = useState(false);
 
   const openPage = (link: string) => {
     setRetract(true);
-    setLoadPage(true);
     setTimeout(() => {
       Navigate(link);
     }, 2000);
