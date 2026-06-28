@@ -42,14 +42,7 @@ function RotatingDisk({ Navigate }: Props) {
 
   return (
     <motion.div
-      className="nav-wrapper"
-      {...(loadpage === true && retract === true
-        ? {
-            animate: { opacity: 0 },
-            transition: { ease: "linear", duration: 2 },
-          }
-        : {})}
-    >
+      className="nav-wrapper">
       <PlayerBar />
       <motion.div className="disk-wrapper">
         <motion.svg
@@ -57,8 +50,7 @@ function RotatingDisk({ Navigate }: Props) {
           width="70vw"
           xmlns="http://www.w3.org/2000/svg"
           className="scroll-svg"
-          onPan={(e, info) => {
-            console.log(e);
+          onPan={(_e, info) => {
             rotation.set(-(lastRotation.current + info.offset.x * 0.1));
           }}
           style={{ rotate: turn }}
@@ -67,15 +59,15 @@ function RotatingDisk({ Navigate }: Props) {
           }}
           {...(retract === true
             ? {
-                animate: { y: -700 },
-                transition: { ease: "linear", duration: 2 },
-              }
+              animate: { y: -700 },
+              transition: { ease: "linear", duration: 2 },
+            }
             : {})}
           {...(extend === true
             ? {
-                animate: { y: 0 },
-                transition: { ease: "linear", duration: 2 },
-              }
+              animate: { y: 0 },
+              transition: { ease: "linear", duration: 2 },
+            }
             : {})}
         >
           <PlayerDisk />

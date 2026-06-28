@@ -46,7 +46,7 @@ body {
 
 .header-grid {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 50%;
 }
 
 .custom-header {
@@ -60,6 +60,7 @@ body {
     font-weight: 900;
     writing-mode: sideways-lr;
     font-size: 3.5vw;
+
 }
 
 /*TopBar styles*/
@@ -182,9 +183,15 @@ body {
     size: 1vw;
 }
 
-.btn-success {
+.btn-outline-secondary {
     margin-right: 5px;
     margin-bottom: 5px;
+}
+
+.filter-button {
+    font-weight: 600;
+    border-color: rgba(240, 240, 240, 0.6);
+    color: rgba(240, 240, 240, 0.6);
 }
 
 /*ContentItem styles */
