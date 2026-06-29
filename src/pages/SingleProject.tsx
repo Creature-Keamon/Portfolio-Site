@@ -1,6 +1,4 @@
 import Page from "../components/Page";
-import ProjectContentItem from "../components/ProjectContentItem";
-import type { JSX } from "react";
 import TextItemWrapper from "../components/individualProjectComponents/TextItemWrapper";
 import ImageItemWrapper from "../components/individualProjectComponents/ImageItemWrapper";
 
