@@ -13,7 +13,7 @@ interface Props {
   navigate?: (item: string) => void;
 }
 
-function ContentItem({
+function ProjectContentItem({
   imgName,
   pageURL,
   name,
@@ -55,4 +55,4 @@ function ContentItem({
   );
 }
 
-export default ContentItem;
+export default ProjectContentItem;

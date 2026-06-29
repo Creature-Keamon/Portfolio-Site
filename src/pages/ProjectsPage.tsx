@@ -1,5 +1,5 @@
 import Page from "../components/Page";
-import ContentItem from "../components/ContentItem";
+import ProjectContentItem from "../components/ProjectContentItem";
 import { useState } from "react";
 import Projects from "../data/ProjectList";
 
@@ -35,7 +35,7 @@ function ProjectsPage({ Navigate }: Props) {
       <div className="content-grid">
         {content.map((Project, index) => {
           return (
-            <ContentItem
+            <ProjectContentItem
               right={(index + 1) % 2 === 0 ? true : false}
               name={Project.Name}
               content={Project.Year}

@@ -21,10 +21,8 @@ const reminisceData = {
           Film Competition, and was my second film that I have created
           seriously. It follows two friend watching footage on a camcorder that
           their best friend had filmed over the course of their friendship
-          <p></p>
-          For this project, I was the lead Editor.<p></p> I also wrote most of
-          the script,
-          <p></p>assisted in directing,<p></p> and provided props.
+
+          For this project, I was the lead Editor. I also wrote most ofthe script, assisted in directing, and provided props.
         </p>
       ),
     },

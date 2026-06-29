@@ -1,6 +1,8 @@
 import Page from "../components/Page";
-import ContentItem from "../components/ContentItem";
+import ProjectContentItem from "../components/ProjectContentItem";
 import type { JSX } from "react";
+import TextItemWrapper from "../components/individualProjectComponents/TextItemWrapper";
+import ImageItemWrapper from "../components/individualProjectComponents/ImageItemWrapper";
 
 interface Props {
   Navigate: (item: string) => void;
@@ -13,11 +15,18 @@ interface Props {
     font: string;
     textColor: string;
     backgroundColor: string;
-    pageData: { imgName: string; pageData: JSX.Element }[];
+    pageData: { imgName: string; pageData: string }[];
   };
 }
 
 function SingleProject({ Navigate, data }: Props) {
+  const text: string[] = [];
+  const imgNames: string[] = [];
+  for (let i = 0; i < data.pageData.length; i++) {
+    text.push(data.pageData[i].pageData);
+    imgNames.push(data.pageData[i].imgName);
+  }
+  const newData = { font: data.font, textColor: data.textColor, texts: text };
   return (
     <Page
       title={data.title}
@@ -31,21 +40,14 @@ function SingleProject({ Navigate, data }: Props) {
       Navigate={Navigate}
       pageName={data.title}
     >
-      <div className="content-grid">
-        {data.pageData.map((item, index) => {
-          return (
-            <ContentItem
-              right={(index + 1) % 2 === 0 ? true : false}
-              content={
-                <div style={{ color: data.textColor }}>{item.pageData}</div>
-              }
-              imgName={item.imgName}
-              font={data.font}
-              key={index}
-              header={index > 0 ? false : true}
-            />
-          );
-        })}
+      <div className="single-project-content-grid">
+        <div className="text-wrapper">
+          <TextItemWrapper data={newData} />
+
+        </div>
+        <div className="image-wrapper">
+          <ImageItemWrapper imgNames={imgNames} />
+        </div>
       </div>
     </Page>
   );

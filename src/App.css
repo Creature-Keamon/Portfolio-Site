@@ -296,6 +296,25 @@ body {
     right: 1;
 }
 
+.text-item {
+    text-align: justify;
+}
+
+.single-project-content-grid {
+    margin-top: 3vh;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    column-gap: 3%;
+}
+
+.text-wrapper {
+    animation: slideBottom 1s;
+}
+
+.image-wrapper {
+    animation: slideBottom 1s;
+}
+
 /*About and Contact styles*/
 .other-text-wrapper {
     padding-left: 100px;
@@ -314,6 +333,16 @@ body {
 @keyframes slideTop {
     0% {
         transform: translateY(-1000px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(1000px);
     }
 
     100% {
