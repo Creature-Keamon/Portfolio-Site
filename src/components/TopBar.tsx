@@ -25,7 +25,8 @@ function TopBar({
     <div className="top-bar-wrapper">
       <div className="return-button-wrapper">
         <div className="internal-button">
-          <Button onClick={() => Navigate("Home")}>Home</Button>
+          
+          <Button onClick={() => Navigate("Home") }>Home</Button>
         </div>
         {!["Projects", "About", "Contact"].includes(pageName) && (
           <div className="internal-button">

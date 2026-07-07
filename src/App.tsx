@@ -6,11 +6,43 @@ import SingleProject from "./pages/SingleProject";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Projects from "./data/ProjectList";
+import { createBrowserRouter } from "react-router-dom";
+
+
 
 function App() {
 
   const [page, SetPage] = useState("Home");
   const navigate = (to: string) => SetPage(to);
+  let children = [
+    {
+        path: "/Projects",
+        element: <ProjectsPage Navigate={navigate} />
+    },
+    {
+        path: "/Contact",
+        element: <Contact Navigate={navigate} />
+    },
+    {
+        path: "/About",
+        element: <About Navigate={navigate} />
+    },
+  ];
+  Projects.forEach(project => {
+    children.push(
+    {
+      path: "/Projects/" + project.PageURL,
+      element: <SingleProject Navigate={navigate} data={project.data} />
+    })
+  });
+  const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <RotatingDisk Navigate={navigate} />,
+        children: children,
+    }
+
+])
 
   return (
     <div>
