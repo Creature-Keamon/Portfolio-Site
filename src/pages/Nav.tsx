@@ -68,9 +68,9 @@ function RotatingDisk() {
             : {})}
         >
           <PlayerDisk />
-          <Disk type="about" onClick={() => openPage("/About")} />
-          <Disk type="contact" onClick={() => openPage("/Contact")} />
-          <Disk type="project" onClick={() => openPage("/Projects")} />
+          <Disk type="about" onClick={() => openPage("About")} />
+          <Disk type="contact" onClick={() => openPage("Contact")} />
+          <Disk type="project" onClick={() => openPage("Projects")} />
           <Disk type="joke" onClick={() => jokeDiskAction()} />
         </motion.svg>
       </motion.div>

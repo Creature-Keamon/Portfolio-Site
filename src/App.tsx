@@ -11,10 +11,10 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 function App():React.ReactElement | null {
   return (
     <Routes>
-      <Route path="/" element={<RotatingDisk Navigate={navigate}/>}/>
-      <Route path="/Projects" element={<ProjectsPage Navigate={navigate}/>}/>
-      <Route path="/Contact"  element={<Contact Navigate={navigate}/>}/>
-      <Route path="/About" element={<About Navigate={navigate}/>}/>
+      <Route path="/" element={<RotatingDisk />}/>
+      <Route path="/Projects" element={<ProjectsPage />}/>
+      <Route path="/Contact"  element={<Contact />}/>
+      <Route path="/About" element={<About />}/>
       {Projects.map((Project)=>{
         return (<Route path={"/Projects"+Project.PageURL} element={<SingleProject  Navigate={navigate} data={Project.data}/>}/>)
       })}
