@@ -1,31 +1,25 @@
 import "./App.css";
-import { useState } from "react";
 import ProjectsPage from "./pages/ProjectsPage";
 import RotatingDisk from "./pages/Nav";
 import SingleProject from "./pages/SingleProject";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Projects from "./data/ProjectList";
+import { Route, Routes, useNavigate } from "react-router-dom";
 
-function App() {
 
-  const [page, SetPage] = useState("Home");
-  const navigate = (to: string) => SetPage(to);
-
+function App():React.ReactElement | null {
   return (
-    <div>
-      {page === "Projects" && <ProjectsPage Navigate={navigate} />}
-      {page === "Home" && <RotatingDisk Navigate={navigate} />}
-      {page === "Contact" && <Contact Navigate={navigate} />}
-      {page === "About" && <About Navigate={navigate} />}
-      {Projects.map((Project) => {
-        return (
-          page === Project.PageURL && <SingleProject Navigate={navigate} data={Project.data} />
-        )
-      })
-      }
-    </div>
-  );
+    <Routes>
+      <Route path="/" element={<RotatingDisk />}/>
+      <Route path="/Projects" element={<ProjectsPage />}/>
+      <Route path="/Contact"  element={<Contact />}/>
+      <Route path="/About" element={<About />}/>
+      {Projects.map((Project)=>{
+        return (<Route path={"/Projects"+Project.PageURL} element={<SingleProject  Navigate={navigate} data={Project.data}/>}/>)
+      })}
+    </Routes>
+  )
 }
 
 export default App;

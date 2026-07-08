@@ -14,7 +14,6 @@ interface Props {
   buttonText?: string[];
   buttonImages?: string[];
   filterItem?: (filter: string) => void;
-  Navigate: (link: string) => void;
   pageName?: string;
 }
 
@@ -31,7 +30,6 @@ function Page({
   buttonText,
   buttonImages,
   filterItem,
-  Navigate,
   pageName = "",
 }: Props) {
   if (backgroundColor != null) {
@@ -53,7 +51,6 @@ function Page({
       </div>
       <div className="grid-item">
         <TopBar
-          Navigate={Navigate}
           {...(buttonLinks != null ? { buttonLinks: buttonLinks } : {})}
           buttonImages={buttonImages}
           buttonText={buttonText}

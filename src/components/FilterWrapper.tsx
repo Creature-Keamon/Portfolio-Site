@@ -1,4 +1,4 @@
-import FilterButton from "./FilterButton";
+import FilterButton from "./NavigatableFilterButton";
 import Filters from "../data/FiltersList";
 
 interface Props {

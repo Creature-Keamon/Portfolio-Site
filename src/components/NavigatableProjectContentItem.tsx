@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import ContentHero from "./ContentHero";
 import { motion } from "motion/react";
 
@@ -10,7 +11,6 @@ interface Props {
   tags?: string[];
   right?: boolean;
   header?: boolean;
-  navigate?: (item: string) => void;
 }
 
 function ProjectContentItem({
@@ -20,10 +20,10 @@ function ProjectContentItem({
   content,
   tags = [],
   right = false,
-  navigate,
   font,
   header,
 }: Props) {
+  let nav = useNavigate();
   return (
     <motion.div
       className={
@@ -34,9 +34,9 @@ function ProjectContentItem({
       {...(tags.length > 0
         ? { style: { width: "60%" } }
         : { style: { width: "90%" } })}
-      {...(pageURL != null && navigate != null
+      {...(pageURL != null
         ? {
-          onClick: () => navigate(pageURL),
+          onClick: () => nav(pageURL),
           whileHover: { scale: 1.03 },
           whileTap: { scale: 0.9 },
         }

@@ -297,6 +297,7 @@ body {
 }
 
 .text-item {
+    font-size: larger;
     text-align: justify;
 }
 
@@ -304,7 +305,7 @@ body {
     margin-top: 3vh;
     display: grid;
     grid-template-columns: 40% 60%;
-    column-gap: 3%;
+    column-gap: 4%;
 }
 
 .text-wrapper {
