@@ -7,9 +7,9 @@ interface Props {
 function ImageItemWrapper({ imgNames }: Props) {
     return (
         <div className="image-item-wrapper-wrapper">
-            {imgNames.map((name) => {
+            {imgNames.map((name, i) => {
                 return (
-                    <div>
+                    <div key={"image-item-wrapper-" + i}>
                         <ImageItem imgName={name} />
                         <p></p>
                     </div>

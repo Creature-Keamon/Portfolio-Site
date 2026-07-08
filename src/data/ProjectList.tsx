@@ -14,7 +14,7 @@ const Projects = [
     Year: "2025",
     ImgName: Decommission,
     Tags: ["Game Design", "3D Art"],
-    PageURL: "/Decommission",
+    PageURL: "Decommission",
     data: decommissionData
   },
   {
@@ -22,7 +22,7 @@ const Projects = [
     Year: "2024",
     ImgName: Ammit,
     Tags: ["Game Design", "3D Art", "Programming", "Writing"],
-    PageURL: "/Ammit",
+    PageURL: "Ammit",
     data: ammitData
   },
   {
@@ -30,7 +30,7 @@ const Projects = [
     Year: "2023/25",
     ImgName: Portfolio,
     Tags: ["Programming", "Web Development"],
-    PageURL: "/Portfolio",
+    PageURL: "Portfolio",
     data: portfolioData
   },
   {
@@ -38,7 +38,7 @@ const Projects = [
     Year: "2025",
     ImgName: Reminisce,
     Tags: ["Filmmaking", "Video Editing", "Writing"],
-    PageURL: "/Reminisce",
+    PageURL: "Reminisce",
     data: reminisceData
   },
 ];

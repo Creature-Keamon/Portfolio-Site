@@ -25,8 +25,8 @@ function TopBar({
     <div className="top-bar-wrapper">
       <div className="return-button-wrapper">
         <div className="internal-button">
-          
-          <Button onClick={() => nav("/Home") }>Home</Button>
+
+          <Button onClick={() => nav("/Portfolio-Site")}>Home</Button>
         </div>
         {!["Projects", "About", "Contact"].includes(pageName) && (
           <div className="internal-button">
@@ -49,8 +49,8 @@ function TopBar({
           </div>
         )}
 
-        {buttonLinks.map((link: string, i: number) => (
-          <div className="external-button">
+        {buttonLinks.map((link, i) => (
+          <div className={"external-button"} key={"external-button-" + i}>
             <Button
               colour="secondary"
               key={i}

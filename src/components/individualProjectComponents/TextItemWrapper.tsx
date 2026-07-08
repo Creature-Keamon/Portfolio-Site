@@ -11,10 +11,10 @@ interface Props {
 function TextItemWrapper({ data }: Props) {
     return (
         <div className="text-item-wrapper-wrapper">
-            {data.texts.map((text) => {
+            {data.texts.map((text, i) => {
                 const newData = { font: data.font, textColor: data.textColor, text };
                 return (
-                    <div>
+                    <div key={"text-item-wrapper-" + i}>
                         <TextItem data={newData} />
                         <p></p>
                     </div>

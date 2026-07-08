@@ -19,7 +19,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="Portfolio-Site/Contact" element={<Contact />} />
         <Route path="Portfolio-Site/About" element={<About />} />
         {Projects.map((Project) => {
-          return (<Route path={"Portfolio-Site/Projects" + Project.PageURL} element={<SingleProject data={Project.data} />} />)
+          return (<Route path={"Portfolio-Site/Projects/" + Project.PageURL} element={<SingleProject data={Project.data} />} />)
         })}
       </Routes>
     </BrowserRouter>
