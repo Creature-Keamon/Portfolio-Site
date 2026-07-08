@@ -1,25 +1,27 @@
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
-import ProjectsPage from "./pages/ProjectsPage";
+import {BrowserRouter, Route, Routes } from "react-router-dom";
 import RotatingDisk from "./pages/Nav";
-import SingleProject from "./pages/SingleProject";
+import ProjectsPage from "./pages/ProjectsPage";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import SingleProject from "./pages/SingleProject";
 import Projects from "./data/ProjectList";
-import { Route, Routes, useNavigate } from "react-router-dom";
 
-
-function App():React.ReactElement | null {
-  return (
-    <Routes>
-      <Route path="/" element={<RotatingDisk />}/>
-      <Route path="/Projects" element={<ProjectsPage />}/>
-      <Route path="/Contact"  element={<Contact />}/>
-      <Route path="/About" element={<About />}/>
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
+    <BrowserRouter>
+      <Routes>
+      <Route path="Portfolio-Site/" element={<RotatingDisk />}/>
+      <Route path="Portfolio-Site/Projects" element={<ProjectsPage />} />
+      <Route path="Portfolio-Site/Contact"  element={<Contact />}/>
+      <Route path="Portfolio-Site/About" element={<About/>}/>
       {Projects.map((Project)=>{
-        return (<Route path={"/Projects"+Project.PageURL} element={<SingleProject  Navigate={navigate} data={Project.data}/>}/>)
+        return (<Route path={"Portfolio-Site/Projects"+Project.PageURL} element={<SingleProject data={Project.data}/>}/>)
       })}
     </Routes>
-  )
-}
-
-export default App;
+    </BrowserRouter>   
+  </StrictMode>
+);
