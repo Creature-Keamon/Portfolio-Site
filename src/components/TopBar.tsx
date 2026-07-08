@@ -1,7 +1,7 @@
-import Button from "./Button";
+import { useNavigate } from "react-router-dom";
+import Button from "./NavigatableButton";
 
 interface Props {
-  Navigate: (item: string) => void;
   buttonLinks?: string[];
   buttonImages?: string[];
   buttonText?: string[];
@@ -14,23 +14,23 @@ const openLink = (url: string) => {
 };
 
 function TopBar({
-  Navigate,
   buttonLinks = [],
   buttonText = [],
   buttonImages = [],
   pageName = "",
   font,
 }: Props) {
+  let nav = useNavigate();
   return (
     <div className="top-bar-wrapper">
       <div className="return-button-wrapper">
         <div className="internal-button">
           
-          <Button onClick={() => Navigate("Home") }>Home</Button>
+          <Button onClick={() => nav("/Home") }>Home</Button>
         </div>
         {!["Projects", "About", "Contact"].includes(pageName) && (
           <div className="internal-button">
-            <Button onClick={() => Navigate("Projects")}>
+            <Button onClick={() => nav("/Projects")}>
               Return to Projects
             </Button>
           </div>

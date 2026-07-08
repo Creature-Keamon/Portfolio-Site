@@ -1,13 +1,9 @@
 import Page from "../components/Page";
-import ProjectContentItem from "../components/ProjectContentItem";
+import ProjectContentItem from "../components/NavigatableProjectContentItem";
 import { useState } from "react";
 import Projects from "../data/ProjectList";
 
-interface Props {
-  Navigate: (item: string) => void;
-}
-
-function ProjectsPage({ Navigate }: Props) {
+function ProjectsPage() {
   const [content, setContent] = useState(Projects);
 
   const filterItem = (filter: string) => {
@@ -29,7 +25,6 @@ function ProjectsPage({ Navigate }: Props) {
       title="PROJECTS"
       backgroundColor="rgb(29,32,33)"
       filterItem={filterItem}
-      Navigate={Navigate}
       pageName="Projects"
     >
       <div className="content-grid">
@@ -42,7 +37,6 @@ function ProjectsPage({ Navigate }: Props) {
               imgName={Project.ImgName}
               tags={Project.Tags}
               pageURL={Project.PageURL}
-              navigate={Navigate}
               key={index}
               header={true}
             />

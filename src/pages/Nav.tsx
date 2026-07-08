@@ -3,12 +3,11 @@ import PlayerDisk from "../components/PlayerDisk";
 import { useRef, useState } from "react";
 import PlayerBar from "../components/PlayerBar";
 import Disk from "../components/Disk";
+import { useNavigate } from "react-router-dom";
 
-interface Props {
-  Navigate: (item: string) => void;
-}
 
-function RotatingDisk({ Navigate }: Props) {
+function RotatingDisk() {
+  let nav = useNavigate();
   document.body.style.backgroundColor = "rgba(87, 87, 87, 1)";
   document.body.style.overflow = "hidden";
   const [retract, setRetract] = useState(false);
@@ -17,7 +16,7 @@ function RotatingDisk({ Navigate }: Props) {
   const openPage = (link: string) => {
     setRetract(true);
     setTimeout(() => {
-      Navigate(link);
+      nav(link);
     }, 2000);
   };
 
@@ -69,9 +68,9 @@ function RotatingDisk({ Navigate }: Props) {
             : {})}
         >
           <PlayerDisk />
-          <Disk type="about" onClick={() => openPage("About")} />
-          <Disk type="contact" onClick={() => openPage("Contact")} />
-          <Disk type="project" onClick={() => openPage("Projects")} />
+          <Disk type="about" onClick={() => openPage("/About")} />
+          <Disk type="contact" onClick={() => openPage("/Contact")} />
+          <Disk type="project" onClick={() => openPage("/Projects")} />
           <Disk type="joke" onClick={() => jokeDiskAction()} />
         </motion.svg>
       </motion.div>

@@ -3,7 +3,6 @@ import TextItemWrapper from "../components/individualProjectComponents/TextItemW
 import ImageItemWrapper from "../components/individualProjectComponents/ImageItemWrapper";
 
 interface Props {
-  Navigate: (item: string) => void;
   data: {
     buttonText: string[];
     buttonImages: string[];
@@ -17,7 +16,7 @@ interface Props {
   };
 }
 
-function SingleProject({ Navigate, data }: Props) {
+function SingleProject({ data }: Props) {
   const text: string[] = [];
   const imgNames: string[] = [];
   for (let i = 0; i < data.pageData.length; i++) {
@@ -35,7 +34,6 @@ function SingleProject({ Navigate, data }: Props) {
       buttonLinks={data.buttonLinks}
       buttonText={data.buttonText}
       buttonImages={data.buttonImages}
-      Navigate={Navigate}
       pageName={data.title}
     >
       <div className="single-project-content-grid">

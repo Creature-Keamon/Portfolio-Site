@@ -1,5 +1,5 @@
 import ContentText from "./ContentText";
-import FilterButton from "./FilterButton";
+import FilterButton from "./NavigatableFilterButton";
 
 interface Props {
   font?: string;
