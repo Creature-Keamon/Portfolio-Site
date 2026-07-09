@@ -199,6 +199,7 @@ body {
 .content-grid {
     margin-top: 3vh;
     display: grid;
+    row-gap: 1%;
     grid-template-columns: auto;
 }
 
@@ -215,7 +216,7 @@ body {
 }
 
 .content-wrapper {
-    height: 60%;
+
     padding-bottom: 5px;
     position: relative;
     animation: scaleIn 1s;
