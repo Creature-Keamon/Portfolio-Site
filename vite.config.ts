@@ -6,6 +6,6 @@ const ReactCompilerConfig = {/* ... */ };
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [svgr(),react({babel: {plugins: ['babel-plugin-react-compiler',ReactCompilerConfig]}})],
-  base:'/Portfolio-Site/'
+  plugins: [svgr(), react({ babel: { plugins: ['babel-plugin-react-compiler', ReactCompilerConfig] } })],
+  base: '/'
 });
