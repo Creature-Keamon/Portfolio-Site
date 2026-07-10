@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://creature-keamon.github.io/Portfolio-Site/",
+  "homepage": "https://creature-keamon.github.io/Portfolio-Site",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
