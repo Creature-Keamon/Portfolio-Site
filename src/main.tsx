@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.css";
 import "./styles.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, HashRouter as Router } from "react-router-dom";
 import RotatingDisk from "./pages/Nav";
 import ProjectsPage from "./pages/ProjectsPage";
 import Contact from "./pages/Contact";
@@ -14,12 +14,12 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="Portfolio-Site/" element={<RotatingDisk />} />
-        <Route path="Portfolio-Site/Projects" element={<ProjectsPage />} />
-        <Route path="Portfolio-Site/Contact" element={<Contact />} />
-        <Route path="Portfolio-Site/About" element={<About />} />
+        <Route path="/" element={<RotatingDisk />} />
+        <Route path="/Projects" element={<ProjectsPage />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/About" element={<About />} />
         {Projects.map((Project) => {
-          return (<Route path={"Portfolio-Site/Projects/" + Project.PageURL} element={<SingleProject data={Project.data} />} />)
+          return (<Route path={"/Projects/" + Project.PageURL} element={<SingleProject data={Project.data} />} />)
         })}
       </Routes>
     </BrowserRouter>
