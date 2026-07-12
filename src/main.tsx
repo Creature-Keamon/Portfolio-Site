@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.css";
 import "./styles.css";
-import { BrowserRouter, Route, Routes, HashRouter as Router } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RotatingDisk from "./pages/Nav";
 import ProjectsPage from "./pages/ProjectsPage";
 import Contact from "./pages/Contact";
