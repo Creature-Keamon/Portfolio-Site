@@ -1,4 +1,3 @@
-import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.css";
 import "./styles.css";
@@ -13,12 +12,12 @@ import Projects from "./data/ProjectList";
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
     <Routes>
-      <Route path="Portfolio-Site/" element={<RotatingDisk />} />
-      <Route path="Portfolio-Site/Projects" element={<ProjectsPage />} />
-      <Route path="Portfolio-Site/Contact" element={<Contact />} />
-      <Route path="Portfolio-Site/About" element={<About />} />
+      <Route path="/Portfolio-Site/" element={<RotatingDisk />} />
+      <Route path="/Portfolio-Site/Projects" element={<ProjectsPage />} />
+      <Route path="/Portfolio-Site/Contact" element={<Contact />} />
+      <Route path="/Portfolio-Site/About" element={<About />} />
       {Projects.map((Project) => {
-        return (<Route path={"Portfolio-Site/Projects/" + Project.PageURL} element={<SingleProject data={Project.data} />} />)
+        return (<Route path={"/Portfolio-Site/Projects/" + Project.PageURL} element={<SingleProject data={Project.data} />} />)
       })}
     </Routes>
   </BrowserRouter>
