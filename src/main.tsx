@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.css";
 import "./styles.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import RotatingDisk from "./pages/Nav";
 import ProjectsPage from "./pages/ProjectsPage";
 import Contact from "./pages/Contact";
@@ -10,7 +10,7 @@ import SingleProject from "./pages/SingleProject";
 import Projects from "./data/ProjectList";
 
 createRoot(document.getElementById("root")!).render(
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
       <Route path="/Portfolio-Site/" element={<RotatingDisk />} />
       <Route path="/Portfolio-Site/Projects" element={<ProjectsPage />} />
@@ -20,5 +20,5 @@ createRoot(document.getElementById("root")!).render(
         return (<Route path={"/Portfolio-Site/Projects/" + Project.PageURL} element={<SingleProject data={Project.data} />} />)
       })}
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 );
