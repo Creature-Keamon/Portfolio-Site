@@ -1,6 +1,7 @@
 import Page from "../components/Page";
 import TextItemWrapper from "../components/individualProjectComponents/TextItemWrapper";
 import ImageItemWrapper from "../components/individualProjectComponents/ImageItemWrapper";
+import { ScrollRestoration } from "react-router-dom";
 
 interface Props {
   data: {
@@ -36,6 +37,7 @@ function SingleProject({ data }: Props) {
       buttonImages={data.buttonImages}
       pageName={data.title}
     >
+      
       <div className="single-project-content-grid">
         <div className="text-wrapper">
           <TextItemWrapper data={newData} />
@@ -45,6 +47,7 @@ function SingleProject({ data }: Props) {
           <ImageItemWrapper imgNames={imgNames} />
         </div>
       </div>
+      
     </Page>
   );
 }
