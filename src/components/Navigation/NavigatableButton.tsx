@@ -1,8 +1,8 @@
-import githublogo from "../assets/githublogo.svg";
-import youtubelogo from "../assets/youtubelogo.svg";
-import itchiologo from "../assets/itchiologo.svg";
-import link from "../assets/link.svg";
-import linkedinlogo from "../assets/linkedinlogo.svg";
+import githublogo from "../../assets/githublogo.svg";
+import youtubelogo from "../../assets/youtubelogo.svg";
+import itchiologo from "../../assets/itchiologo.svg";
+import link from "../../assets/link.svg";
+import linkedinlogo from "../../assets/linkedinlogo.svg";
 
 interface Props {
   children: React.ReactNode;
@@ -15,7 +15,7 @@ interface Props {
 function Button({
   font,
   children,
-  onClick = () => {},
+  onClick = () => { },
   colour = "primary",
   imageFile,
 }: Props) {

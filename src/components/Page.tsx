@@ -1,6 +1,6 @@
-import CustomHeader from "./CustomHeader";
-import TopBar from "./TopBar";
-import FilterWrapper from "./FilterWrapper";
+import CustomHeader from "./Text/CustomHeader";
+import TopBar from "./Navigation/TopBar";
+import FilterWrapper from "./Navigation/FilterWrapper";
 import type React from "react";
 
 interface Props {

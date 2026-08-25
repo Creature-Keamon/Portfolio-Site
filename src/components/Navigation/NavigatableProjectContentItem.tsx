@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import ContentHero from "./ContentHero";
+import ContentHero from "../ContentHero";
 import { motion } from "motion/react";
 
 interface Props {

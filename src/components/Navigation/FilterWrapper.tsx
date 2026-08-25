@@ -1,5 +1,5 @@
 import FilterButton from "./NavigatableFilterButton";
-import Filters from "../data/FiltersList";
+import Filters from "../../data/FiltersList";
 
 interface Props {
   filterItem: (filter: string) => void;

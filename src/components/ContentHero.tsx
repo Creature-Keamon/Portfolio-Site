@@ -1,5 +1,5 @@
-import ContentText from "./ContentText";
-import FilterButton from "./NavigatableFilterButton";
+import ContentText from "./Text/ContentText";
+import FilterButton from "./Navigation/NavigatableFilterButton";
 
 interface Props {
   font?: string;
@@ -54,7 +54,7 @@ function ContentHero({
         </div>
         <div className="tag-wrapper">
           {tags.map((item, index) => (
-            <FilterButton onClick={() => {}} key={index}>
+            <FilterButton onClick={() => { }} key={index}>
               {item}
             </FilterButton>
           ))}

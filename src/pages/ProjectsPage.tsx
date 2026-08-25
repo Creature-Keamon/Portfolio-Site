@@ -1,5 +1,5 @@
 import Page from "../components/Page";
-import ProjectContentItem from "../components/NavigatableProjectContentItem";
+import ProjectContentItem from "../components/Navigation/NavigatableProjectContentItem";
 import { useState } from "react";
 import Projects from "../data/ProjectList";
 

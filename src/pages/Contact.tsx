@@ -1,5 +1,5 @@
 import Page from "../components/Page";
-import OtherText from "../components/Othertext";
+import OtherText from "../components/Text/Othertext";
 
 function Contact() {
   return (

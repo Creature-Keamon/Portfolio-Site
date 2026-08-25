@@ -1,8 +1,8 @@
 import { motion, useMotionValue, useSpring } from "motion/react";
-import PlayerDisk from "../components/PlayerDisk";
+import PlayerDisk from "../components/Disk/PlayerDisk";
 import { useRef, useState } from "react";
-import PlayerBar from "../components/PlayerBar";
-import Disk from "../components/Disk";
+import PlayerBar from "../components/Disk/PlayerBar";
+import Disk from "../components/Disk/Disk";
 import { useNavigate } from "react-router-dom";
 
 
