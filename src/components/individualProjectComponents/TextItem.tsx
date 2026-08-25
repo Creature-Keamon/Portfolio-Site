@@ -9,7 +9,7 @@ interface Props {
 function TextItem({ data }: Props) {
     return (
         <div className="text-item-wrapper">
-            <p className="text-item" style={{ fontFamily: data.font, color: data.textColor }}>{data.text}</p>
+            <h1 className="text-item" style={{ fontFamily: data.font, color: data.textColor, fontSize: "30px"}}>{data.text}</h1>
         </div>
     );
 }

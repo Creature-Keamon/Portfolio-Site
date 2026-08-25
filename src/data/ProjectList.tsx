@@ -10,6 +10,14 @@ import reminisceData from "./reminisceData";
 
 const Projects = [
   {
+    Name: "Polaroam",
+    Year: "Ongoing",
+    ImgName: Decommission,
+    Tags: ["Full Stack", "Front End", "Web App", "Server"],
+    PageURL: "Decommission",
+    data: decommissionData
+  },
+  {
     Name: "Decommission",
     Year: "2025",
     ImgName: Decommission,
