@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.css";
 import "./styles.css";
-import { HashRouter, Route, Routes, ScrollRestoration } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import RotatingDisk from "./pages/Nav";
 import ProjectsPage from "./pages/ProjectsPage";
 import Contact from "./pages/Contact";

@@ -1,7 +1,6 @@
 import Page from "../components/Page";
 import TextItemWrapper from "../components/individualProjectComponents/TextItemWrapper";
 import ImageItemWrapper from "../components/individualProjectComponents/ImageItemWrapper";
-import { ScrollRestoration } from "react-router-dom";
 
 interface Props {
   data: {
