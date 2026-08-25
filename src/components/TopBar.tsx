@@ -30,7 +30,7 @@ function TopBar({
         </div>
         {!["Projects", "About", "Contact"].includes(pageName) && (
           <div className="internal-button">
-            <Button onClick={() => nav("/Portfolio-Site/Projects")}>
+            <Button onClick={() => nav("/Projects")}>
               Return to Projects
             </Button>
           </div>
