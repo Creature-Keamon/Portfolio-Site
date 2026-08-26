@@ -53,8 +53,8 @@ function ContentHero({
           />
         </div>
         <div className="tag-wrapper">
-          {tags.map((item, index) => (
-            <FilterButton onClick={() => { }} key={index}>
+          {tags.map((item) => (
+            <FilterButton onClick={() => { }} >
               {item}
             </FilterButton>
           ))}

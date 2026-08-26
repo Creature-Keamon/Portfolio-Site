@@ -4,14 +4,14 @@ import Decommission2 from "../assets/images/Decommission2.png";
 import Decommission3 from "../assets/images/Decommission3.png";
 import Ammit from "../assets/images/Ammit.png";
 import Ammit2 from "../assets/images/Ammit2.png";
-import Ammit3 from "../assets/images/Ammit3.png";
+import Ammit3 from "../assets/images/Ammit3.jpeg";
 import Portfolio from "../assets/images/Portfoliosite.png";
 import PortfolioOld from "../assets/images/PortfolioSiteOld.png";
 import PortfolioNew from "../assets/images/PortfolioSiteNew.png";
 import Reminisce from "../assets/images/Reminisce.png";
-import Reminisce2 from "../assets/images/Reminisce2.png";
-import Reminisce3 from "../assets/images/Reminisce3.png";
-import Reminisce4 from "../assets/images/Reminisce4.png";
+import Reminisce2 from "../assets/images/Reminisce2.jpg";
+import Reminisce3 from "../assets/images/Reminisce3.jpg";
+import Reminisce4 from "../assets/images/Reminisce4.jpg";
 
 
 const Projects = [
@@ -19,18 +19,22 @@ const Projects = [
 		Name: "Polaroam",
 		Year: "Ongoing",
 		ImgName: Decommission,
-		Tags: ["Full Stack", "Front End", "Web App", "Server"],
-		PageURL: "Decommission",
+		Tags: ["Full Stack", "Web Development", "AI"],
+		PageURL: "Polaroam",
 		data: {
 			buttonText: ["Itch.io"],
 			buttonImages: ["itchiologo"],
 			buttonLinks: ["https://creaturekeamon.itch.io/decommission"],
-			title: "DECOMMISSION",
-			subtitle: "2025",
-			font: "Genos",
-			textColor: "#ffeac4ce",
-			backgroundColor: "#6b625cff",
+			title: "POLAROAM",
+			subtitle: "Ongoing",
+			summary: "A travel logging app that allows users to upload photos, group them into trips, with AI generated image tags to allow for plain English searching.",
+			font: "Syne",
+			textColor: "#1f1f1f",
+			backgroundColor: "#f8ca40",
+			buttonColor: "#22cacfff",
+			buttonTags: ["polaroam-button"],
 			images: [Decommission, Decommission1, Decommission2, Decommission3],
+			header: "",
 			text: [
 				"Decommission is a small, proof of concept game where you, the player,is a scrapper whose job it is to salvage valuable parts from old and progressively larger and larger spacecraft. The larger the space ship, the more valuables are inside, but require different tools to access. For this project, I was a Game Designer, Project Manager, Team Leader,and 3D modeller.",
 				"From the ground up we wanted it to be a cozy, relaxing experience, so this needed to be reflected in both the gameplay mechanics and the visual aesthetics. For design, we chose a warm colour tone with a small palette, and made all important elements starkly contrast against the background without breaking style.",
@@ -51,9 +55,12 @@ const Projects = [
 			buttonLinks: ["https://creaturekeamon.itch.io/decommission"],
 			title: "DECOMMISSION",
 			subtitle: "2025",
+			summary: "Designed, managed, and created art for a 3D game about dismantling broken down space ships.",
 			font: "Genos",
 			textColor: "#ffeac4ce",
 			backgroundColor: "#6b625cff",
+			buttonColor: "#3f3a36ff",
+			buttonTags: [],
 			images: [Decommission, Decommission1, Decommission2, Decommission3],
 			text: [
 				"Decommission is a small, proof of concept game where you, the player,is a scrapper whose job it is to salvage valuable parts from old and progressively larger and larger spacecraft. The larger the space ship, the more valuables are inside, but require different tools to access. For this project, I was a Game Designer, Project Manager, Team Leader,and 3D modeller.",
@@ -75,9 +82,12 @@ const Projects = [
 			buttonLinks: ["https://mythspire-interactive.itch.io/ammit-the-truth"],
 			title: "ammit the truth",
 			subtitle: "2024",
+			summary: "",
 			font: "Cinzel Decorative",
-			textColor: "rgba(68, 45, 0, 0.8)",
+			textColor: "rgba(68, 45, 0, 1)",
 			backgroundColor: "rgba(184, 146, 75, 1)",
+			buttonColor: "rgba(143, 95, 0, 1)",
+			buttonTags: [],
 			images: [Ammit, Ammit2, Ammit3],
 			text: [
 				"Ammit the Truth is a deduction/detective based visual novel style video game, using art styles influenced by games like 'Hades', and gameplay reminiscent of games like 'Papers Please'. It sees the player take the role of Anubis, the guardian of the egyptian afterlife, where he must interrogate each soul to determine if they deserve entrance to the field of reeds or to be devoured by Ammit. For this project, I was the Project Manager. I also wrote the dialogue for most interactions, created some 3D models, and designed some of the game's systems.",
@@ -101,9 +111,12 @@ const Projects = [
 			],
 			title: "MY PORTFOLIO SITE",
 			subtitle: "2023/25",
+			summary: "",
 			font: "",
 			textColor: "rgba(182, 182, 182, 1)",
 			backgroundColor: "",
+			buttonColor: "rgb(34, 202, 207)",
+			buttonTags: ["polaroam-button"],
 			images: [Portfolio, PortfolioOld, PortfolioNew],
 			text: [
 				"This site was built at the end of 2025 with REACT.JS and Motion.JS. However it was originally made back in 2023 using HTML, CSS and Three.JS. It houses information about me and my projects.",
@@ -124,9 +137,12 @@ const Projects = [
 			buttonLinks: ["https://www.youtube.com/watch?v=lXln7oQxuYs"],
 			title: "To Reminisce",
 			subtitle: "2025",
+			summary: "",
 			font: "Song Myung",
 			textColor: "#ffffffce",
 			backgroundColor: "#c9ab6aff",
+			buttonColor: "rgb(34, 202, 207)",
+			buttonTags: ["polaroam-button"],
 			images: [Reminisce, Reminisce2, Reminisce3, Reminisce4],
 			text: [
 

@@ -184,15 +184,22 @@ body {
     size: 1vw;
 }
 
-.btn-outline-secondary {
-    margin-right: 5px;
-    margin-bottom: 5px;
-}
-
 .filter-button {
     font-weight: 600;
-    border-color: rgba(240, 240, 240, 0.6);
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-style: rgba(0, 0, 0, 1) solid;
+}
+
+.project-page-filter-button {
+    background-color: #1f1f1f;
     color: rgba(240, 240, 240, 0.6);
+    border: 1px solid;
+}
+
+.polaroam-button {
+    box-shadow: 3px 3px 0px #1f1f1f;
 }
 
 /*ContentItem styles */
@@ -266,6 +273,8 @@ body {
     padding-top: 10px;
     position: absolute;
     right: 0;
+    display: flex;
+    flex-wrap: wrap;
     pointer-events: none;
 }
 

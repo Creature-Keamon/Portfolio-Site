@@ -55,8 +55,7 @@ function Page({
           buttonImages={buttonImages}
           buttonText={buttonText}
           pageName={pageName}
-          font={font}
-        />
+          font={font} />
         {filterItem != null ? (
           <FilterWrapper filterItem={filterItem}></FilterWrapper>
         ) : (

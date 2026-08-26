@@ -1,7 +1,7 @@
 import Page from "../components/Page";
 import ProjectContentItem from "../components/Navigation/NavigatableProjectContentItem";
 import { useState } from "react";
-import Projects from "../data/ProjectList";
+import Projects from "../data/ProjectList.ts";
 
 function ProjectsPage() {
   const [content, setContent] = useState(Projects);

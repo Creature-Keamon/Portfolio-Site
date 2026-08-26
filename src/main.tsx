@@ -11,16 +11,16 @@ import Projects from "./data/ProjectList";
 
 createRoot(document.getElementById("root")!).render(
   <HashRouter>
-    
+
     <Routes>
       <Route path="/" element={<RotatingDisk />} />
       <Route path="/Projects" element={<ProjectsPage />} />
       <Route path="/Contact" element={<Contact />} />
       <Route path="/About" element={<About />} />
       {Projects.map((Project) => {
-        return (<Route path={"/Projects/" + Project.PageURL} element={<SingleProject data={Project.data} />} />)
+        return (<Route path={"/Projects/" + Project.PageURL} element={<SingleProject projectInfo={Project} />} />)
       })}
     </Routes>
-    
+
   </HashRouter>
 );

@@ -7,7 +7,7 @@ function FilterButton({ children, onClick }: Props) {
   return (
     <button
       type="button"
-      className={"btn btn-outline-secondary filter-button"}
+      className="filter-button project-page-filter-button"
 
       {...(onClick != null && { onClick: onClick })}
     >
