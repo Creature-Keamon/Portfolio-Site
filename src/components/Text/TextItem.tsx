@@ -2,16 +2,24 @@ interface Props {
     data: {
         font: string;
         textColor: string;
-        text: string;
+        texts: string[];
     };
 }
 
-function TextItem({ data }: Props) {
+function TextItemWrapper({ data }: Props) {
     return (
-        <div className="text-item-wrapper">
-            <h1 className="text-item" style={{ fontFamily: data.font, color: data.textColor, fontSize: "30px"}}>{data.text}</h1>
+        <div className="text-item-wrapper-wrapper">
+            {data.texts.map((text, i) => {
+                const newData = { font: data.font, textColor: data.textColor, text };
+                return (
+                    <div key={"text-item-wrapper-" + i}>
+                        <h2 className="text-item" style={{ fontFamily: newData.font, color: newData.textColor }}>{newData.text}</h2>
+                        <p></p>
+                    </div>
+                )
+            })}
         </div>
     );
 }
 
-export default TextItem;
+export default TextItemWrapper;
