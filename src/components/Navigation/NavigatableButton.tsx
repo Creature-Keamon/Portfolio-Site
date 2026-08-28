@@ -22,8 +22,7 @@ function Button({
   return (
     <button
       type="button"
-      className={"btn btn-" + colour}
-      //style="--btn-border-width: .25rm;"
+      className={"filter-button project-page-filter-button project-page-clickable btn-" + (colour)}
       onClick={onClick}
     >
       {colour === "secondary" ? (

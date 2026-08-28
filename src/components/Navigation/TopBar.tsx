@@ -41,7 +41,6 @@ function TopBar({
               onClick={() =>
                 openLink("https://www.linkedin.com/in/shawn-neal-621028319/")
               }
-              colour="secondary"
               imageFile="linkedinlogo"
             >
               LinkedIn
@@ -52,8 +51,8 @@ function TopBar({
         {buttonLinks.map((link, i) => (
           <div className={"external-button"} key={"external-button-" + i}>
             <Button
-              colour="secondary"
               key={i}
+              colour="secondary"
               onClick={() => openLink(link)}
               imageFile={buttonImages[i]}
               font={font}

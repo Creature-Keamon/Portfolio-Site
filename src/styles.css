@@ -93,17 +93,20 @@ body {
 
 .button-grid-wrapper {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 20% 80%;
     place-items: center;
+}
 
+.button-grid-item {
+    display: flex;
+    align-items: center;
 }
 
 .button-image {
-    width: 70%;
+    width: 100%;
 }
 
 .button-text {
-    width: 100%;
     font-size: 1vw;
 }
 
@@ -196,6 +199,21 @@ body {
     background-color: #1f1f1f;
     color: rgba(240, 240, 240, 0.6);
     border: 1px solid;
+}
+
+.project-page-clickable {
+    box-shadow: 3px 3px 0px rgba(240, 240, 240, 0.6);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-page-clickable:hover {
+    box-shadow: 2px 2px 0px rgba(240, 240, 240, 0.6);
+    transform: translate(1px, 1px);
+}
+
+.project-page-clickable:active {
+    box-shadow: 0px 0px 0px rgba(240, 240, 240, 0.6);
+    transform: translate(3px, 3px);
 }
 
 .polaroam-button {
