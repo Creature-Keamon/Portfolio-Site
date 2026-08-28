@@ -12,19 +12,21 @@ import Reminisce from "../assets/images/Reminisce.png";
 import Reminisce2 from "../assets/images/Reminisce2.jpg";
 import Reminisce3 from "../assets/images/Reminisce3.jpg";
 import Reminisce4 from "../assets/images/Reminisce4.jpg";
+import Polaroam from "../assets/images/Polaroam.png";
+import Polaroam1 from "../assets/images/Polaroam1.png";
 
 
 const Projects = [
 	{
 		Name: "Polaroam",
 		Year: "Ongoing",
-		ImgName: Decommission,
+		ImgName: Polaroam,
 		Tags: ["Full Stack", "Web Development", "AI"],
 		PageURL: "Polaroam",
 		data: {
-			buttonText: ["Itch.io"],
-			buttonImages: ["itchiologo"],
-			buttonLinks: ["https://creaturekeamon.itch.io/decommission"],
+			buttonText: [],
+			buttonImages: [],
+			buttonLinks: [],
 			title: "POLAROAM",
 			subtitle: "Ongoing",
 			summary: "A travel logging app that allows users to upload photos, group them into trips, with AI generated image tags to allow for plain English searching.",
@@ -33,13 +35,10 @@ const Projects = [
 			backgroundColor: "#f8ca40",
 			buttonColor: "#22cacfff",
 			buttonTags: ["polaroam-button"],
-			images: [Decommission, Decommission1, Decommission2, Decommission3],
+			images: [Polaroam, Polaroam1],
 			header: "",
-			text: [
-				"Decommission is a small, proof of concept game where you, the player,is a scrapper whose job it is to salvage valuable parts from old and progressively larger and larger spacecraft. The larger the space ship, the more valuables are inside, but require different tools to access. For this project, I was a Game Designer, Project Manager, Team Leader,and 3D modeller.",
-				"From the ground up we wanted it to be a cozy, relaxing experience, so this needed to be reflected in both the gameplay mechanics and the visual aesthetics. For design, we chose a warm colour tone with a small palette, and made all important elements starkly contrast against the background without breaking style.",
-				"The player has access to multiple tools (and would be able to unlockmore if this was a full game), each with their own use cases. However, we knew that if we designed our tools to be more realistic and representative of themselves in real life, it would introduce extra complexity, tedious-ness and the potential for some frustration.",
-				"To ensure that our tools do not contrast against our cozy design aesthetics, we designed the tool interactions to be boiled down to the most basic (while still allowing for some nuance), but not boiled down so much that the game just plays itself. I helped make the game fun, interesting to look at, and have interesting mechanics, while ensuring that the games' core and identity were not at all compromised on. Decommission can be downloaded from Itch.io from the link above.",
+			text: ["Hello I am writing a description Hello I am writing a description Hello I am writing a description Hello I am writing a description Hello I am writing a description",
+				"Hello I am writing a description Hello I am writing a description Hello I am writing a description Hello I am writing a description"
 			],
 		}
 	},
