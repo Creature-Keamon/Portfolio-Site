@@ -1,8 +1,6 @@
 import Page from "../components/Page";
 import TextItemWrapper from "../components/Text/TextItem";
 import ImageItemWrapper from "../components/Image/ImageItemWrapper";
-import Button from "../components/Navigation/NavigatableButton";
-import LinkButton from "../components/Navigation/ProjectLinkButton";
 
 interface Props {
 	projectInfo: {
@@ -28,9 +26,6 @@ interface Props {
 		}
 	},
 }
-const openLink = (url: string) => {
-	window.open(url, "_blank", "noopener,noreferrer");
-};
 
 function SingleProject({ projectInfo }: Props) {
 	const text: string[] = [];

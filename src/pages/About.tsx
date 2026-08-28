@@ -7,7 +7,6 @@ function About() {
       title="ABOUT ME"
       backgroundColor="rgb(29,32,33)"
       pageName="Contact"
-      buttonImages={linked}
     >
       <div className="content-grid">
         <OtherText>
