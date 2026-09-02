@@ -1,3 +1,4 @@
+import TopBar from "../components/Navigation/TopBar";
 import Page from "../components/Page";
 import OtherText from "../components/Text/Othertext";
 
@@ -6,9 +7,9 @@ function Contact() {
     <Page
       title="CONTACT ME"
       backgroundColor="rgb(29,32,33)"
-      pageName="Contact"
     >
       <div className="content-grid">
+        <TopBar pageName="Contact"/>
         <OtherText>
           Contact me with the LinkedIn link at the top of the page.
         </OtherText>

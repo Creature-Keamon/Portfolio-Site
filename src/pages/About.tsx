@@ -1,3 +1,4 @@
+import TopBar from "../components/Navigation/TopBar";
 import Page from "../components/Page";
 import OtherText from "../components/Text/Othertext";
 
@@ -6,9 +7,9 @@ function About() {
     <Page
       title="ABOUT ME"
       backgroundColor="rgb(29,32,33)"
-      pageName="Contact"
     >
       <div className="content-grid">
+        <TopBar pageName="Contact"/>
         <OtherText>
           I am a student programmer, 3D artist, designer, aspiring bass player
           and video editor from New Zealand, studying Computer Science and Game
