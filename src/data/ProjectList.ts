@@ -21,7 +21,7 @@ const Projects = [
 		Name: "Polaroam",
 		Year: "Ongoing",
 		ImgName: Polaroam,
-		Tags: ["Full Stack", "Web Development", "AI"],
+		Tags: ["Full Stack Development", "CI/CD", "Scrum"],
 		PageURL: "Polaroam",
 		data: {
 			buttonText: [],
@@ -36,10 +36,8 @@ const Projects = [
 			buttonColor: "#22cacfff",
 			buttonTags: ["polaroam-button"],
 			images: [Polaroam, Polaroam1],
-			header: "",
-			text: ["Hello I am writing a description Hello I am writing a description Hello I am writing a description Hello I am writing a description Hello I am writing a description",
-				"Hello I am writing a description Hello I am writing a description Hello I am writing a description Hello I am writing a description"
-			],
+			text: ["Polaroam was developed as group project for a final year Software Engineering class. Here, we were placed in a year long simulation of a real scrum development environment and were expected to create a production ready piece of software while adhering to scrum principles, negotiating stories and acceptance criteria with our Product Owner, creating automatic pipelines, running automatic and manual tests, and most importantly, working as an efficient 6 developer team in a flat organisational heirarchy.", 
+			"Originally Polaroam was called \'Outstanding\' and was a task management app with two-factor authentication for login and kanban style task management. Later we pivoted to instead create a Trip logging app that allows users to store information about their travel, dump photos, and create \'Scrapbooks\' to allow users to share curated and beautiful snapshots into their holidays."],
 		}
 	},
 	{

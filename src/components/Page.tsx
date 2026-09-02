@@ -1,6 +1,4 @@
 import CustomHeader from "./Text/CustomHeader";
-import TopBar from "./Navigation/TopBar";
-import FilterWrapper from "./Navigation/FilterWrapper";
 import type React from "react";
 
 interface Props {
@@ -10,11 +8,7 @@ interface Props {
   font?: string;
   textColor?: string;
   backgroundColor?: string;
-  buttonLinks?: string[];
-  buttonText?: string[];
-  buttonImages?: string[];
-  filterItem?: (filter: string) => void;
-  pageName?: string;
+
 }
 
 /*creates a page within some formatting rules and populates it with 
@@ -26,11 +20,6 @@ function Page({
   font,
   textColor,
   backgroundColor,
-  buttonLinks,
-  buttonText,
-  buttonImages,
-  filterItem,
-  pageName = "",
 }: Props) {
   if (backgroundColor != null) {
     document.body.style.backgroundColor = backgroundColor;
@@ -49,20 +38,7 @@ function Page({
           />
         </div>
       </div>
-      <div className="grid-item">
-        <TopBar
-          {...(buttonLinks != null ? { buttonLinks: buttonLinks } : {})}
-          buttonImages={buttonImages}
-          buttonText={buttonText}
-          pageName={pageName}
-          font={font} />
-        {filterItem != null ? (
-          <FilterWrapper filterItem={filterItem}></FilterWrapper>
-        ) : (
-          <div className="filter-wrapper"></div>
-        )}
-        {children}
-      </div>
+      {children}
     </div>
   );
 }

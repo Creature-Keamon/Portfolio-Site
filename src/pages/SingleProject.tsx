@@ -1,6 +1,7 @@
 import Page from "../components/Page";
 import TextItemWrapper from "../components/Text/TextItem";
 import ImageItemWrapper from "../components/Image/ImageItemWrapper";
+import TopBar from "../components/Navigation/TopBar";
 
 interface Props {
 	projectInfo: {
@@ -39,7 +40,6 @@ function SingleProject({ projectInfo }: Props) {
 	let tags: string = ""
 	for (let i = 0; i < projectInfo.data.buttonTags.length; i++) {
 		tags += projectInfo.data.buttonTags[i];
-		console.log(projectInfo.data.buttonTags[i]);
 		tags += " ";
 
 	}
@@ -50,10 +50,17 @@ function SingleProject({ projectInfo }: Props) {
 			font={projectInfo.data.font}
 			textColor={projectInfo.data.textColor}
 			backgroundColor={projectInfo.data.backgroundColor}
-			buttonLinks={projectInfo.data.buttonLinks}
-			buttonText={projectInfo.data.buttonText}
+			>
+		<div className="grid-item">
+			<TopBar
+			{...(projectInfo.data.buttonLinks != null ? { buttonLinks: projectInfo.data.buttonLinks } : {})}
 			buttonImages={projectInfo.data.buttonImages}
-			pageName={projectInfo.data.title}>
+			buttonText={projectInfo.data.buttonText}
+			pageName={projectInfo.data.title}
+			font={projectInfo.data.font} 
+			tags={tags}
+			buttonColour={projectInfo.data.buttonColor}
+			textColour={projectInfo.data.textColor}/>
 			<div className="single-project-content-grid">
 				<div className="text-wrapper">
 					<div className="content-grid-item">
@@ -82,7 +89,8 @@ function SingleProject({ projectInfo }: Props) {
 				<div className="image-wrapper">
 					<ImageItemWrapper imgNames={imgNames} />
 				</div>
-			</div>
+			</div>`
+      </div>
 
 		</Page>
 	);

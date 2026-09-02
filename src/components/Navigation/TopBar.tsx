@@ -7,6 +7,9 @@ interface Props {
   buttonText?: string[];
   pageName?: string;
   font?: string;
+  tags?: string;
+  buttonColour?: string;
+  textColour?: string;
 }
 
 const openLink = (url: string) => {
@@ -19,6 +22,9 @@ function TopBar({
   buttonImages = [],
   pageName = "",
   font,
+  tags,
+  buttonColour,
+  textColour,
 }: Props) {
   let nav = useNavigate();
   return (
@@ -26,11 +32,11 @@ function TopBar({
       <div className="return-button-wrapper">
         <div className="internal-button">
 
-          <Button onClick={() => nav("/")}>Home</Button>
+          <Button onClick={() => nav("/")} font={font} tags={tags} textColour={textColour} buttonColour={buttonColour}>Home</Button>
         </div>
         {!["Projects", "About", "Contact"].includes(pageName) && (
           <div className="internal-button">
-            <Button onClick={() => nav("/Projects")}>
+            <Button onClick={() => nav("/Projects")} font={font} tags={tags} textColour={textColour} buttonColour={buttonColour}>
               Return to Projects
             </Button>
           </div>
@@ -42,25 +48,29 @@ function TopBar({
                 openLink("https://www.linkedin.com/in/shawn-neal-621028319/")
               }
               imageFile="linkedinlogo"
+              tags={tags}
             >
               LinkedIn
             </Button>
           </div>
         )}
 
-        {buttonLinks.map((link, i) => (
-          <div className={"external-button"} key={"external-button-" + i}>
+       
+          <div className={"external-buttons"}>
+            {buttonLinks.map((link, i) => (
             <Button
               key={i}
-              colour="secondary"
+              type="secondary"
               onClick={() => openLink(link)}
               imageFile={buttonImages[i]}
               font={font}
+              tags={tags } textColour={textColour} buttonColour={buttonColour}
             >
               {buttonText[i]}
             </Button>
+            ))}
           </div>
-        ))}
+        
       </div>
     </div>
   );

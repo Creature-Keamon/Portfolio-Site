@@ -2,6 +2,8 @@ import Page from "../components/Page";
 import ProjectContentItem from "../components/Navigation/NavigatableProjectContentItem";
 import { useState } from "react";
 import Projects from "../data/ProjectList.ts";
+import TopBar from "../components/Navigation/TopBar.tsx";
+import FilterWrapper from "../components/Navigation/FilterWrapper.tsx";
 
 function ProjectsPage() {
   const [content, setContent] = useState(Projects);
@@ -24,10 +26,17 @@ function ProjectsPage() {
     <Page
       title="PROJECTS"
       backgroundColor="rgb(29,32,33)"
-      filterItem={filterItem}
-      pageName="Projects"
     >
+      
       <div className="content-grid">
+        <TopBar buttonColour={"rgba(240, 240, 240, 0.6)"} textColour={"rgb(29, 32, 33)"}/>
+        
+        {filterItem != null ? (
+        <FilterWrapper filterItem={filterItem}></FilterWrapper>
+        ) : (
+        <div className="filter-wrapper"></div>
+        )}
+
         {content.map((Project, index) => {
           return (
             <ProjectContentItem
