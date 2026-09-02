@@ -1,6 +1,8 @@
 const Filters = [
+  "Full Stack Development",
+  "CI/CD",
+  "Scrum",
   "Programming",
-  "Web Development",
   "3D Art",
   "Game Design",
   "Video Editing",

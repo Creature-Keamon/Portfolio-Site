@@ -9,7 +9,7 @@ function Contact() {
       backgroundColor="rgb(29,32,33)"
     >
       <div className="content-grid">
-        <TopBar pageName="Contact"/>
+        <TopBar pageName="Contact" tags="project-page-filter-button project-page-clickable"/>
         <OtherText>
           Contact me with the LinkedIn link at the top of the page.
         </OtherText>

@@ -66,10 +66,9 @@ body {
 
 /*TopBar styles*/
 
-.top-bar {
+.top-bar-wrapper {
     height: 60px;
     /*background-color: rgba(221, 221, 221, 0.1);*/
-    filter: blur(10px);
     z-index: 1;
 }
 
@@ -77,24 +76,12 @@ body {
     padding-left: 10px;
     padding-top: 21px;
     width: fit-content;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+    display: flex;
+    justify-content: space-between;
     column-gap: 10px;
-    height: 1vh;
+    height: 100%;
 }
 
-.btn-secondary {
-    width: 8vw;
-}
-
-.internal-buttons {
-    height: 50%;
-    width: fit-content;
-}
-
-.external-buttons {
-    height: 2vh;
-}
 
 .button-grid-wrapper {
     display: grid;
@@ -108,12 +95,8 @@ body {
 }
 
 .button-image {
-    height: 1.6vh;
+    height: 15px;
     margin-right: 5px;
-}
-
-.button-text {
-    font-size: 1vw;
 }
 
 /*Navigation Page styles*/
@@ -199,6 +182,7 @@ body {
     margin-right: 5px;
     margin-bottom: 5px;
     border-style: rgba(0, 0, 0, 1) solid;
+    size: 1vw;
 }
 
 .project-page-filter-button {

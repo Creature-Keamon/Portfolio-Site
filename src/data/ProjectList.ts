@@ -80,7 +80,7 @@ const Projects = [
 			font: "Cinzel Decorative",
 			textColor: "rgba(68, 45, 0, 1)",
 			backgroundColor: "rgba(184, 146, 75, 1)",
-			buttonColor: "rgba(143, 95, 0, 1)",
+			buttonColor: "rgb(207, 138, 0)",
 			buttonTags: [],
 			images: [Ammit, Ammit2, Ammit3],
 			text: [
@@ -106,17 +106,13 @@ const Projects = [
 			font: "Song Myung",
 			textColor: "#ffffffce",
 			backgroundColor: "#c9ab6aff",
-			buttonColor: "rgb(34, 202, 207)",
-			buttonTags: ["polaroam-button"],
+			buttonColor: "rgb(99, 80, 18)",
+			buttonTags: [],
 			images: [Reminisce, Reminisce2, Reminisce3, Reminisce4],
 			text: [
-
 				"To Reminisce is a short film created for the New Zealand 2025 48 Hour Film Competition, and was my second film that I have create seriously.It follows two friend watching footage on a camcorder that their best friend had filmed over the course of their friendship. For this project, I was the lead Editor.I also wrote most ofthe script, assisted in directing, and provided props.",
-
 				"The editing workstation used over the course of the 48 hour creation period, shared between two other editors and myself. We used Davinci Resolve to edit our film. As lead editor and primary script writer, it was my role to translate the director's creative vision into a coherent, Having edited a lot of my own content, I believe I have translated my knack for pacing and habit for rewatching my edits to check for inconsistencies into the creation of this film.",
-
 				"The film we made the previous year was plagued with problems. This year, we did everything we could to mitigate the issues, by double checking our boom arm was properly connected to the camera and filming early in the day, we were able to complete most of the filming by late afternoon, giving me an opportunity to create a rough cut of our film to verify the quality of the clips and to check whether we needed to film more scenes.",
-
 				"Creating To Reminisce was an excellent lesson in filmmaking, writing, the importance of preparation and risk mitigation. Not to mention teamwork and working to a time limit.To Reminisce can be viewed from the button at the top of the page.",
 			],
 		}

@@ -30,19 +30,13 @@ function TopBar({
   return (
     <div className="top-bar-wrapper">
       <div className="return-button-wrapper">
-        <div className="internal-button">
-
           <Button onClick={() => nav("/")} font={font} tags={tags} textColour={textColour} buttonColour={buttonColour}>Home</Button>
-        </div>
         {!["Projects", "About", "Contact"].includes(pageName) && (
-          <div className="internal-button">
             <Button onClick={() => nav("/Projects")} font={font} tags={tags} textColour={textColour} buttonColour={buttonColour}>
               Return to Projects
             </Button>
-          </div>
         )}
         {pageName === "Contact" && (
-          <div className="internal-button">
             <Button
               onClick={() =>
                 openLink("https://www.linkedin.com/in/shawn-neal-621028319/")
@@ -52,11 +46,7 @@ function TopBar({
             >
               LinkedIn
             </Button>
-          </div>
         )}
-
-       
-          <div className={"external-buttons"}>
             {buttonLinks.map((link, i) => (
             <Button
               key={i}
@@ -69,7 +59,6 @@ function TopBar({
               {buttonText[i]}
             </Button>
             ))}
-          </div>
         
       </div>
     </div>

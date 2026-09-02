@@ -51,7 +51,7 @@ function Button({
               <img className="button-image" src={linkedinlogo} />
             )}
           </div>
-          <div className="button-grid-item button-text">{children}</div>
+          <div className="button-grid-item button-text" style={{ fontFamily: font }}>{children}</div>
         </div>
       ) : (
         <div className="button-text" style={{ fontFamily: font }}>

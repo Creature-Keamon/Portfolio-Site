@@ -29,15 +29,15 @@ function ProjectsPage() {
     >
       
       <div className="content-grid">
-        <TopBar buttonColour={"rgba(240, 240, 240, 0.6)"} textColour={"rgb(29, 32, 33)"}/>
+        <TopBar tags="project-page-filter-button project-page-clickable" pageName="Projects"/>
         
         {filterItem != null ? (
         <FilterWrapper filterItem={filterItem}></FilterWrapper>
         ) : (
         <div className="filter-wrapper"></div>
         )}
-
-        {content.map((Project, index) => {
+        <div className="content-wrapper">
+          {content.map((Project, index) => {
           return (
             <ProjectContentItem
               right={(index + 1) % 2 === 0 ? true : false}
@@ -51,6 +51,7 @@ function ProjectsPage() {
             />
           );
         })}
+        </div>
       </div>
     </Page>
   );

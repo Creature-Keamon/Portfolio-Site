@@ -9,7 +9,7 @@ function About() {
       backgroundColor="rgb(29,32,33)"
     >
       <div className="content-grid">
-        <TopBar pageName="Contact"/>
+        <TopBar pageName="Contact" tags="project-page-filter-button project-page-clickable"/>
         <OtherText>
           I am a student programmer, 3D artist, designer, aspiring bass player
           and video editor from New Zealand, studying Computer Science and Game
