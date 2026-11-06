@@ -31,13 +31,22 @@ function ContentHero({
       }
     >
       {right === true && tags.length === 0 && (
-        <ContentText
-          name={name}
-          content={content}
-          font={font}
-          right={right}
-          projectPage={tags.length > 0}
-        />
+        <div className="below-text">
+          <ContentText
+            name={name}
+            content={content}
+            font={font}
+            right={right}
+            projectPage={tags.length > 0}
+          />
+          <div className="tag-wrapper">
+            {tags.map((item) => (
+              <FilterButton >
+                {item}
+              </FilterButton>
+            ))}
+          </div>
+        </div>
       )}
       <div
         className={"content-grid-item" + (right === true ? "-right" : "-left")}
@@ -52,22 +61,26 @@ function ContentHero({
             src={imgName}
           />
         </div>
-        <div className="tag-wrapper">
-          {tags.map((item) => (
-            <FilterButton >
-              {item}
-            </FilterButton>
-          ))}
-        </div>
+
       </div>
       {(right === false || tags.length > 0) && (
-        <ContentText
-          name={name}
-          content={content}
-          font={font}
-          right={right}
-          projectPage={tags.length > 0}
-        />
+        <div className="below-text">
+          <ContentText
+            name={name}
+            content={content}
+            font={font}
+            right={right}
+            projectPage={tags.length > 0}
+          />
+          <div className="tag-wrapper">
+            {tags.map((item) => (
+              <FilterButton >
+                {item}
+              </FilterButton>
+            ))}
+          </div>
+        </div>
+
       )}
     </div>
   );

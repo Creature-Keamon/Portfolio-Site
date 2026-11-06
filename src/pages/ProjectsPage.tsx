@@ -27,30 +27,30 @@ function ProjectsPage() {
       title="PROJECTS"
       backgroundColor="rgb(29,32,33)"
     >
-      
+
       <div className="content-grid">
-        <TopBar tags="project-page-filter-button project-page-clickable" pageName="Projects"/>
-        
+        <TopBar tags="project-page-filter-button project-page-clickable" pageName="Projects" />
+
         {filterItem != null ? (
-        <FilterWrapper filterItem={filterItem}></FilterWrapper>
+          <FilterWrapper filterItem={filterItem}></FilterWrapper>
         ) : (
-        <div className="filter-wrapper"></div>
+          <div className="filter-wrapper"></div>
         )}
         <div className="content-wrapper">
           {content.map((Project, index) => {
-          return (
-            <ProjectContentItem
-              right={(index + 1) % 2 === 0 ? true : false}
-              name={Project.Name}
-              content={Project.Year}
-              imgName={Project.ImgName}
-              tags={Project.Tags}
-              pageURL={Project.PageURL}
-              key={index}
-              header={true}
-            />
-          );
-        })}
+            return (
+              <ProjectContentItem
+                right={(index + 1) % 2 === 0 ? true : false}
+                name={Project.Name}
+                content={Project.Year}
+                imgName={Project.ImgName}
+                tags={Project.Tags}
+                pageURL={Project.PageURL}
+                key={index}
+                header={true}
+              />
+            );
+          })}
         </div>
       </div>
     </Page>

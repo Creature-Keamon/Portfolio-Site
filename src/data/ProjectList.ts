@@ -11,21 +11,22 @@ import Reminisce3 from "../assets/images/Reminisce3.jpg";
 import Reminisce4 from "../assets/images/Reminisce4.jpg";
 import Polaroam from "../assets/images/Polaroam.png";
 import Polaroam1 from "../assets/images/Polaroam1.png";
+import PolaroamHero from "../assets/images/PolaroamHero.png";
 
 
 const Projects = [
 	{
 		Name: "Polaroam",
-		Year: "Ongoing",
-		ImgName: Polaroam,
+		Year: "2026",
+		ImgName: PolaroamHero,
 		Tags: ["Full Stack Development", "CI/CD", "Scrum"],
 		PageURL: "Polaroam",
 		data: {
-			buttonText: [],
-			buttonImages: [],
-			buttonLinks: [],
+			buttonText: ["Github"],
+			buttonImages: ["githublogo"],
+			buttonLinks: ["https://github.com/2026-SENG302-team700/Polaroam"],
 			title: "POLAROAM",
-			subtitle: "Ongoing",
+			subtitle: "2026",
 			summary: "A travel logging app that allows users to upload photos, group them into trips, with AI generated image tags to allow for plain English searching.",
 			font: "Syne",
 			textColor: "#1f1f1f",
@@ -33,8 +34,9 @@ const Projects = [
 			buttonColor: "#22cacfff",
 			buttonTags: ["polaroam-button"],
 			images: [Polaroam, Polaroam1],
-			text: ["Polaroam was developed as group project for a final year Software Engineering class. Here, we were placed in a year long simulation of a real scrum development environment and were expected to create a production ready piece of software while adhering to scrum principles, negotiating stories and acceptance criteria with our Product Owner, creating automatic pipelines, running automatic and manual tests, and most importantly, working as an efficient 6 developer team in a flat organisational heirarchy.", 
-			"Originally Polaroam was called \'Outstanding\' and was a task management app with two-factor authentication for login and kanban style task management. Later we pivoted to instead create a Trip logging app that allows users to store information about their travel, dump photos, and create \'Scrapbooks\' to allow users to share curated and beautiful snapshots into their holidays."],
+			text: ["Polaroam was developed as group project for a final year Software Engineering class. Here, we were placed in a year long simulation of a real scrum development environment and were expected to create a production ready piece of software while adhering to scrum principles, negotiating stories and acceptance criteria with our Product Owner, creating automatic pipelines, running automatic and manual tests, and most importantly, working as an efficient 6 developer team in a flat organisational heirarchy.",
+				"Originally Polaroam was called \'Outstanding\' and was a task management app with two-factor authentication for login and kanban style task management. Later we pivoted to instead create a Trip logging app that allows users to store information about their travel, dump photos, and create \'Scrapbooks\' to allow users to share curated and beautiful snapshots into their holidays.",
+				"To develop this piece of software, we were all required to learn languages that were largely unfamiliar to us, those being C#.NET and Typescript/Svelte. Not only did we have to learn these languages, but we had to learn how to use C# as a backend, with PostgreSQL as our database and using a variety of testing techniques (integration, unit, acceptance and manual). We had to learn how to perform proper code reviews, write good merge requests and maintain good code quality, all of which has allowed us to develop the best piece of software that we possibly can."],
 		}
 	},
 	{

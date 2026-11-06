@@ -30,10 +30,8 @@ interface Props {
 
 function SingleProject({ projectInfo }: Props) {
 	const text: string[] = [];
-	const imgNames: string[] = [];
 	for (let i = 0; i < projectInfo.data.text.length; i++) {
 		text.push(projectInfo.data.text[i]);
-		imgNames.push(projectInfo.data.images[i]);
 	}
 	const newData = { font: projectInfo.data.font, textColor: projectInfo.data.textColor, texts: text };
 
@@ -50,47 +48,47 @@ function SingleProject({ projectInfo }: Props) {
 			font={projectInfo.data.font}
 			textColor={projectInfo.data.textColor}
 			backgroundColor={projectInfo.data.backgroundColor}
-			>
-		<div className="grid-item">
-			<TopBar
-			{...(projectInfo.data.buttonLinks != null ? { buttonLinks: projectInfo.data.buttonLinks } : {})}
-			buttonImages={projectInfo.data.buttonImages}
-			buttonText={projectInfo.data.buttonText}
-			pageName={projectInfo.data.title}
-			font={projectInfo.data.font} 
-			tags={tags}
-			buttonColour={projectInfo.data.buttonColor}
-			textColour={projectInfo.data.textColor}/>
-			<div className="single-project-content-grid">
-				<div className="text-wrapper">
-					<div className="content-grid-item">
-						<h3 className=" text header-text"
-							style={{ fontFamily: projectInfo.data.font, color: projectInfo.data.textColor, lineHeight: 0.9 }}>
-							{projectInfo.data.summary}
-						</h3>
-						<h5 style={{ fontFamily: projectInfo.data.font, color: projectInfo.data.textColor, marginTop: "10px" }}>Relevant Tags</h5>
-						<div style={{ display: "flex" }}>
-							{projectInfo.Tags.map((tag) => {
-								return <button
-									type="button"
-									className={"filter-button " + tags}
-									style={{ fontFamily: projectInfo.data.font, color: projectInfo.data.textColor, backgroundColor: projectInfo.data.buttonColor }}
-									disabled>
-									{tag}
+		>
+			<div className="grid-item">
+				<TopBar
+					{...(projectInfo.data.buttonLinks != null ? { buttonLinks: projectInfo.data.buttonLinks } : {})}
+					buttonImages={projectInfo.data.buttonImages}
+					buttonText={projectInfo.data.buttonText}
+					pageName={projectInfo.data.title}
+					font={projectInfo.data.font}
+					tags={tags}
+					buttonColour={projectInfo.data.buttonColor}
+					textColour={projectInfo.data.textColor} />
+				<div className="single-project-content-grid">
+					<div className="text-wrapper">
+						<div className="content-grid-item">
+							<h3 className=" text header-text"
+								style={{ fontFamily: projectInfo.data.font, color: projectInfo.data.textColor, lineHeight: 0.9 }}>
+								{projectInfo.data.summary}
+							</h3>
+							<h5 style={{ fontFamily: projectInfo.data.font, color: projectInfo.data.textColor, marginTop: "10px" }}>Relevant Tags</h5>
+							<div style={{ display: "flex" }}>
+								{projectInfo.Tags.map((tag) => {
+									return <button
+										type="button"
+										className={"filter-button " + tags}
+										style={{ fontFamily: projectInfo.data.font, color: projectInfo.data.textColor, backgroundColor: projectInfo.data.buttonColor }}
+										disabled>
+										{tag}
 
-								</button>
-							})}
+									</button>
+								})}
+							</div>
+							<hr className="rounded" style={{ color: projectInfo.data.textColor, borderTop: "2px solid", }} />
+
 						</div>
-						<hr className="rounded" style={{ color: projectInfo.data.textColor, borderTop: "2px solid", }} />
-
+						<TextItemWrapper data={newData} />
 					</div>
-					<TextItemWrapper data={newData} />
-				</div>
-				<div className="image-wrapper">
-					<ImageItemWrapper imgNames={imgNames} />
-				</div>
-			</div>`
-      </div>
+					<div className="image-wrapper">
+						<ImageItemWrapper imgNames={projectInfo.data.images} />
+					</div>
+				</div>`
+			</div>
 
 		</Page>
 	);

@@ -7,13 +7,16 @@ interface Props {
 
 export default function FilterWrapper({ filterItem }: Props) {
   return (
-    <div className="filter-wrapper text">
+    <div className="text filter-container">
       <h3 className="filter-header text header-text">FILTERS</h3>
-      {Filters.map((item, index) => (
-        <FilterButton onClick={() => filterItem(item)} key={index}>
-          {item}
-        </FilterButton>
-      ))}
+      <div className="filter-wrapper ">
+        {Filters.map((item, index) => (
+          <FilterButton onClick={() => filterItem(item)} key={index}>
+            {item}
+          </FilterButton>
+        ))}
+      </div>
+
     </div>
   );
 }

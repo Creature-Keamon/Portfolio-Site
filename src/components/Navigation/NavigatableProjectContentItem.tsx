@@ -27,7 +27,6 @@ function ProjectContentItem({
   return (
     <motion.div
       className={
-        "content-wrapper " +
         (right === true ? "content-wrapper-right" : "content-wrapper-left") +
         (pageURL === null ? " project-page-item" : "")
       }
