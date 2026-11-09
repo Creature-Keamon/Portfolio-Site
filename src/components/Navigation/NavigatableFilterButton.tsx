@@ -7,7 +7,7 @@ function FilterButton({ children, onClick }: Props) {
   return (
     <button
       type="button"
-      className={"filter-button project-page-filter-button " + (onClick != null ? " project-page-clickable" : " ")}
+      className={"filter-button project-page-filter-button " + (onClick != null ? " project-page-clickable" : " project-page-unclickable")}
 
       {...(onClick != null && { onClick: onClick })}
     >

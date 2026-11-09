@@ -30,9 +30,6 @@ function ProjectContentItem({
         (right === true ? "content-wrapper-right" : "content-wrapper-left") +
         (pageURL === null ? " project-page-item" : "")
       }
-      {...(tags.length > 0
-        ? { style: { width: "60%" } }
-        : { style: { width: "90%" } })}
       {...(pageURL != null
         ? {
           onClick: () => nav(pageURL),
