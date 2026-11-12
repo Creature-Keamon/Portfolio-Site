@@ -1,0 +1,68 @@
+import { useNavigate } from "react-router-dom";
+import Button from "./NavigatableButton";
+
+interface Props {
+  buttonLinks?: string[];
+  buttonImages?: string[];
+  buttonText?: string[];
+  pageName?: string;
+  font?: string;
+  tags?: string;
+  buttonColour?: string;
+  textColour?: string;
+}
+
+const openLink = (url: string) => {
+  window.open(url, "_blank", "noopener,noreferrer");
+};
+
+function TopBar({
+  buttonLinks = [],
+  buttonText = [],
+  buttonImages = [],
+  pageName = "",
+  font,
+  tags,
+  buttonColour,
+  textColour,
+}: Props) {
+  let nav = useNavigate();
+  return (
+    <div className="top-bar-wrapper">
+      <div className="return-button-wrapper">
+          <Button onClick={() => nav("/")} font={font} tags={tags} textColour={textColour} buttonColour={buttonColour}>Home</Button>
+        {!["Projects", "About", "Contact"].includes(pageName) && (
+            <Button onClick={() => nav("/Projects")} font={font} tags={tags} textColour={textColour} buttonColour={buttonColour}>
+              Return to Projects
+            </Button>
+        )}
+        {pageName === "Contact" && (
+            <Button
+              onClick={() =>
+                openLink("https://www.linkedin.com/in/shawn-neal-621028319/")
+              }
+              imageFile="linkedinlogo"
+              tags={tags}
+            >
+              LinkedIn
+            </Button>
+        )}
+            {buttonLinks.map((link, i) => (
+            <Button
+              key={i}
+              type="secondary"
+              onClick={() => openLink(link)}
+              imageFile={buttonImages[i]}
+              font={font}
+              tags={tags } textColour={textColour} buttonColour={buttonColour}
+            >
+              {buttonText[i]}
+            </Button>
+            ))}
+        
+      </div>
+    </div>
+  );
+}
+
+export default TopBar;

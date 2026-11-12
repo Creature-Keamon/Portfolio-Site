@@ -1,0 +1,84 @@
+import { motion, useMotionValue, useSpring } from "motion/react";
+import PlayerDisk from "../components/Disk/PlayerDisk";
+import { useRef, useState } from "react";
+import PlayerBar from "../components/Disk/PlayerBar";
+import Disk from "../components/Disk/Disk";
+import { useNavigate } from "react-router-dom";
+
+
+function RotatingDisk() {
+  let nav = useNavigate();
+  document.body.style.backgroundColor = "rgba(87, 87, 87, 1)";
+  document.body.style.overflow = "hidden";
+  const [retract, setRetract] = useState(false);
+  const [extend, setExtend] = useState(false);
+
+  const openPage = (link: string) => {
+    setRetract(true);
+    setTimeout(() => {
+      nav(link);
+    }, 2000);
+  };
+
+  const jokeDiskAction = () => {
+    setRetract(true);
+    setTimeout(() => {
+      setExtend(true);
+      setRetract(false);
+    }, 2500);
+    setTimeout(() => {
+      setExtend(false);
+    }, 2000);
+  };
+
+  const rotation = useMotionValue(0);
+  const lastRotation = useRef(0);
+  const turn = useSpring(rotation, {
+    stiffness: 30,
+  });
+
+  return (
+    <motion.div
+      className="nav-wrapper">
+      <PlayerBar />
+      <motion.div className="disk-wrapper">
+        <motion.svg
+          height="70vw"
+          width="70vw"
+          xmlns="http://www.w3.org/2000/svg"
+          className="scroll-svg"
+          onPan={(_e, info) => {
+            rotation.set(-(lastRotation.current + info.offset.x * 0.1));
+          }}
+          style={{ rotate: turn }}
+          onPanStart={() => {
+            rotation.set(-0);
+          }}
+          {...(retract === true
+            ? {
+              animate: { y: -700 },
+              transition: { ease: "linear", duration: 2 },
+            }
+            : {})}
+          {...(extend === true
+            ? {
+              animate: { y: 0 },
+              transition: { ease: "linear", duration: 2 },
+            }
+            : {})}
+        >
+          <PlayerDisk />
+          <Disk type="about" onClick={() => openPage("About")} />
+          <Disk type="contact" onClick={() => openPage("Contact")} />
+          <Disk type="project" onClick={() => openPage("Projects")} />
+          <Disk type="joke" onClick={() => jokeDiskAction()} />
+        </motion.svg>
+      </motion.div>
+      <div className="under-construction-wrapper">
+        <h3>This website is under construction</h3>
+      </div>
+    </motion.div>
+  );
+}
+
+export default RotatingDisk;

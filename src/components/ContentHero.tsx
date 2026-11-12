@@ -1,0 +1,89 @@
+import ContentText from "./Text/ContentText";
+import FilterButton from "./Navigation/NavigatableFilterButton";
+
+interface Props {
+  font?: string;
+  imgName: string;
+  pageURL?: string;
+  name?: string;
+  content?: React.ReactNode;
+  tags?: string[];
+  right?: boolean;
+  header?: boolean;
+}
+
+function ContentHero({
+  imgName,
+  pageURL,
+  name,
+  content,
+  tags = [],
+  right = false,
+  font,
+  header = true,
+}: Props) {
+  return (
+    <div
+      className={
+        "main-content" +
+        (header === false ? " project-content-grid" : "") +
+        (right === true ? "-right" : "-left")
+      }
+    >
+      {right === true && tags.length === 0 && (
+        <div className="below-text">
+          <ContentText
+            name={name}
+            content={content}
+            font={font}
+            right={right}
+            projectPage={tags.length > 0}
+          />
+          <div className="tag-wrapper">
+            {tags.map((item) => (
+              <FilterButton >
+                {item}
+              </FilterButton>
+            ))}
+          </div>
+        </div>
+      )}
+      <div
+        className={"content-grid-item" + (right === true ? "-right" : "-left")}
+      >
+        <div className="content-image-wrapper">
+          <img
+            className={
+              "content-image" +
+              (pageURL != null ? " clickable" : "") +
+              (header === false ? " flavour-image" : " main-image")
+            }
+            src={imgName}
+          />
+        </div>
+
+      </div>
+      {(right === false || tags.length > 0) && (
+        <div className="below-text">
+          <ContentText
+            name={name}
+            content={content}
+            font={font}
+            right={right}
+            projectPage={tags.length > 0}
+          />
+          <div className="tag-wrapper">
+            {tags.map((item) => (
+              <FilterButton >
+                {item}
+              </FilterButton>
+            ))}
+          </div>
+        </div>
+
+      )}
+    </div>
+  );
+}
+
+export default ContentHero;
